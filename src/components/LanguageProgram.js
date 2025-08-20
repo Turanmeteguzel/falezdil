@@ -1,23 +1,26 @@
 import React from "react";
 import coffeImage from "../assets/images/hero/coffe.png";
+import checkFat from "../assets/images/CheckFat.png";
 
 const LanguageProgram = () => {
   return (
-    <div className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+    <div className="py-12 sm:py-16 lg:py-20 bg-[#FEFDF9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-left mb-12 sm:mb-16 lg:mb-20">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-gray-800 mb-4 sm:mb-6 leading-tight">
+          <h1 className="text-4xl font-normal text-gray-800 mb-4 sm:mb-6 leading-tight">
             Senin İçin En Uygun İngilizce Veya Almanca,
             <br />
-            <span className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+            <span className="font-bold text-4xl">
               Eğitim Programını Birlikte Belirleyelim
             </span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl leading-relaxed">
-            Her öğrencinin dil öğrenme ihtiyacı farklıdır. Amacımız, İngilizce
-            veya Almanca için kişiselleştirilmiş, kolay, keyifli ve etkili bir
-            öğrenme süreci sunmaktır.
+            Her öğrencinin dil öğrenme ihtiyacı ve süreci birbirinden farklıdır.
+            Biz de bu yolculuğa sizi tanıyarak başlıyoruz. Amacımız sadece ders
+            vermek değil; hedefinize en uygun, size özel bir öğrenme süreci
+            sunmak. İngilizce veya Almanca öğrenmek isteyen herkesin hayatında
+            bu süreci kolay, keyifli ve etkili hale getiriyoruz.
           </p>
         </div>
 
@@ -30,15 +33,15 @@ const LanguageProgram = () => {
                 HADİ TANIŞALIM!
               </h2>
               <div className="space-y-2 sm:space-y-3 text-gray-700 leading-relaxed text-left">
-                <p className="text-sm sm:text-base">
+                <p className="text-xl">
                   Kurs ortamımızı birlikte gezelim, kahvemizi içerken seni biraz
                   daha tanıyalım.
                 </p>
-                <p className="text-sm sm:text-base">
+                <p className="text-xl">
                   Hangi dili neden öğrenmek istediğini öğrenelim, hedeflerini
                   dinleyelim.
                 </p>
-                <p className="text-sm sm:text-base">
+                <p className="text-xl">
                   Danışmanımız, bu görüşmede sana özel planlamanın temelini
                   atar.
                 </p>
@@ -71,7 +74,7 @@ const LanguageProgram = () => {
               <img
                 src={coffeImage}
                 alt="Coffee and language learning"
-                className="w-full h-auto object-contain rounded-lg shadow-lg"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
@@ -93,13 +96,13 @@ const LanguageProgram = () => {
                   Sen sadece öğrenmeye odaklan.
                 </p>
               </div>
-              <button className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-colors duration-200 shadow-lg">
+              <button className="w-full sm:w-auto bg-[#FFAE00] hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-colors duration-200 shadow-lg">
                 Ücretsiz Tanışma Görüşmesi Planla
               </button>
             </div>
 
             {/* Right Side - Feature List */}
-            <div className="grid grid-cols-2 gap-4 sm:gap-6">
+            <div className="flex gap-2 sm:gap-3 justify-between w-full">
               {[
                 { title: "DİL", subtitle: "Seçildi" },
                 { title: "HEDEF", subtitle: "Belirlendi" },
@@ -108,16 +111,18 @@ const LanguageProgram = () => {
                 { title: "YAŞ GRUBU", subtitle: "Belirlendi" },
                 { title: "SINIF YAPISI", subtitle: "Belirlendi" },
               ].map((feature, index) => (
-                <div key={index} className="text-left">
-                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full flex items-center justify-center mb-2">
-                    <span className="text-white font-bold text-xs sm:text-sm">
-                      ✓
-                    </span>
+                <div key={index} className="text-center flex-1">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center mx-auto mb-2">
+                    <img
+                      src={checkFat}
+                      alt="Check"
+                      className="w-4 h-4 sm:w-6 sm:h-6"
+                    />
                   </div>
-                  <div className="font-bold text-gray-800 text-xs sm:text-sm">
+                  <div className="font-bold text-[#FFAE00] text-xs sm:text-sm mb-1">
                     {feature.title}
                   </div>
-                  <div className="text-gray-600 text-xs">
+                  <div className="text-[#0E0E0E] text-xs">
                     {feature.subtitle}
                   </div>
                 </div>

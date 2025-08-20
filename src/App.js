@@ -17,8 +17,8 @@ function App() {
       </div>
       <NewSection />
       <LanguageProgram />
-      <FAQ />
       <Testimonials />
+      <FAQ />
       <Footer />
     </div>
   );

@@ -56,36 +56,6 @@ const Navbar = () => {
               </a>
             </div>
           </div>
-
-          {/* Right side - CTA Buttons */}
-          <div className="flex items-center space-x-3">
-            <button
-              className="transition-all duration-300"
-              style={{
-                backgroundColor: "#FFAE00",
-                border: "0.74px solid #FFAE00",
-                color: "#0E0E0E",
-                width: "65px",
-                height: "32px",
-                borderRadius: "6px",
-                fontFamily: "Inter, sans-serif",
-                fontWeight: "600",
-                fontSize: "10px",
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.backgroundColor = "#FFFFFF";
-                e.target.style.color = "#FFAE00";
-                e.target.style.borderColor = "#FFAE00";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.backgroundColor = "#FFAE00";
-                e.target.style.color = "#0E0E0E";
-                e.target.style.borderColor = "#FFAE00";
-              }}
-            >
-              Kaydol
-            </button>
-          </div>
         </div>
       </div>
 

@@ -6,7 +6,7 @@ import icondort from "../assets/images/hero/icondort.png";
 
 const NewSection = () => {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#FEFDF9]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-left space-y-4 sm:space-y-6 lg:space-y-8">
           <h1 className="font-lato">
@@ -44,240 +44,255 @@ const NewSection = () => {
             kişiselleştirilmiş ve keyifli bir dil eğitimi bekliyor.
           </p>
 
-          <div
-            className="flex space-x-3 sm:space-x-4 lg:space-x-6 overflow-x-auto pb-4 scrollbar-hide"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            {/* Card 1 */}
-            <div
-              className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
-              style={{
-                width: "240px",
-                height: "280px",
-                borderRadius: "12px",
-                border: "1px solid #CFCFCF",
-                boxShadow: "4px 4px 2px 0px #FFAE0026",
-              }}
-            >
-              <img
-                src={iconbir}
-                alt="Icon 1"
-                className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
-              />
-              <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
-                HEMEN BAŞLA !
-              </h3>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
-                İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
-              </p>
-              <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
-                Kayıt olduğun hafta derslere başla, zaman kaybetmeden
-                hedeflerine ulaş.
-              </p>
+          <div className="relative">
+            {/* Scroll Indicators */}
+            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-r from-white via-white to-transparent w-8 h-16 flex items-center justify-center">
+              <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center opacity-60">
+                <span className="text-gray-600 text-xs">←</span>
+              </div>
             </div>
 
-            {/* Card 2 */}
-            <div
-              className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
-              style={{
-                width: "240px",
-                height: "280px",
-                borderRadius: "12px",
-                border: "1px solid #CFCFCF",
-                boxShadow: "4px 4px 2px 0px #FFAE0026",
-              }}
-            >
-              <img
-                src={iconiki}
-                alt="Icon 2"
-                className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
-              />
-              <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
-                HEMEN BAŞLA !
-              </h3>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
-                İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
-              </p>
-              <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
-                Kayıt olduğun hafta derslere başla, zaman kaybetmeden
-                hedeflerine ulaş.
-              </p>
+            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-l from-white via-white to-transparent w-8 h-16 flex items-center justify-center">
+              <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center opacity-60">
+                <span className="text-gray-600 text-xs">→</span>
+              </div>
             </div>
 
-            {/* Card 3 */}
             <div
-              className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
-              style={{
-                width: "240px",
-                height: "280px",
-                borderRadius: "12px",
-                border: "1px solid #CFCFCF",
-                boxShadow: "4px 4px 2px 0px #FFAE0026",
-              }}
+              className="flex space-x-3 sm:space-x-4 lg:space-x-6 overflow-x-auto pb-4 scrollbar-hide px-8"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
-              <img
-                src={iconuc}
-                alt="Icon 3"
-                className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
-              />
-              <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
-                HEMEN BAŞLA !
-              </h3>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
-                İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
-              </p>
-              <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
-                Kayıt olduğun hafta derslere başla, zaman kaybetmeden
-                hedeflerine ulaş.
-              </p>
-            </div>
+              {/* Card 1 */}
+              <div
+                className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
+                style={{
+                  width: "240px",
+                  height: "280px",
+                  borderRadius: "12px",
+                  border: "1px solid #CFCFCF",
+                  boxShadow: "4px 4px 2px 0px #FFAE0026",
+                }}
+              >
+                <img
+                  src={iconbir}
+                  alt="Icon 1"
+                  className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
+                />
+                <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
+                  HEMEN BAŞLA !
+                </h3>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
+                  İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
+                </p>
+                <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
+                  Kayıt olduğun hafta derslere başla, zaman kaybetmeden
+                  hedeflerine ulaş.
+                </p>
+              </div>
 
-            {/* Card 4 */}
-            <div
-              className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
-              style={{
-                width: "240px",
-                height: "280px",
-                borderRadius: "12px",
-                border: "1px solid #CFCFCF",
-                boxShadow: "4px 4px 2px 0px #FFAE0026",
-              }}
-            >
-              <img
-                src={icondort}
-                alt="Icon 4"
-                className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
-              />
-              <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
-                HEMEN BAŞLA !
-              </h3>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
-                İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
-              </p>
-              <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
-                Kayıt olduğun hafta derslere başla, zaman kaybetmeden
-                hedeflerine ulaş.
-              </p>
-            </div>
+              {/* Card 2 */}
+              <div
+                className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
+                style={{
+                  width: "240px",
+                  height: "280px",
+                  borderRadius: "12px",
+                  border: "1px solid #CFCFCF",
+                  boxShadow: "4px 4px 2px 0px #FFAE0026",
+                }}
+              >
+                <img
+                  src={iconiki}
+                  alt="Icon 2"
+                  className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
+                />
+                <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
+                  HEMEN BAŞLA !
+                </h3>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
+                  İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
+                </p>
+                <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
+                  Kayıt olduğun hafta derslere başla, zaman kaybetmeden
+                  hedeflerine ulaş.
+                </p>
+              </div>
 
-            {/* Card 5 */}
-            <div
-              className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
-              style={{
-                width: "240px",
-                height: "280px",
-                borderRadius: "12px",
-                border: "1px solid #CFCFCF",
-                boxShadow: "4px 4px 2px 0px #FFAE0026",
-              }}
-            >
-              <img
-                src={iconbir}
-                alt="Icon 5"
-                className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
-              />
-              <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
-                HEMEN BAŞLA !
-              </h3>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
-                İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
-              </p>
-              <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
-                Kayıt olduğun hafta derslere başla, zaman kaybetmeden
-                hedeflerine ulaş.
-              </p>
-            </div>
+              {/* Card 3 */}
+              <div
+                className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
+                style={{
+                  width: "240px",
+                  height: "280px",
+                  borderRadius: "12px",
+                  border: "1px solid #CFCFCF",
+                  boxShadow: "4px 4px 2px 0px #FFAE0026",
+                }}
+              >
+                <img
+                  src={iconuc}
+                  alt="Icon 3"
+                  className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
+                />
+                <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
+                  HEMEN BAŞLA !
+                </h3>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
+                  İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
+                </p>
+                <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
+                  Kayıt olduğun hafta derslere başla, zaman kaybetmeden
+                  hedeflerine ulaş.
+                </p>
+              </div>
 
-            {/* Card 6 */}
-            <div
-              className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
-              style={{
-                width: "240px",
-                height: "280px",
-                borderRadius: "12px",
-                border: "1px solid #CFCFCF",
-                boxShadow: "4px 4px 2px 0px #FFAE0026",
-              }}
-            >
-              <img
-                src={iconiki}
-                alt="Icon 6"
-                className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
-              />
-              <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
-                HEMEN BAŞLA !
-              </h3>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
-                İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
-              </p>
-              <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
-                Kayıt olduğun hafta derslere başla, zaman kaybetmeden
-                hedeflerine ulaş.
-              </p>
-            </div>
+              {/* Card 4 */}
+              <div
+                className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
+                style={{
+                  width: "240px",
+                  height: "280px",
+                  borderRadius: "12px",
+                  border: "1px solid #CFCFCF",
+                  boxShadow: "4px 4px 2px 0px #FFAE0026",
+                }}
+              >
+                <img
+                  src={icondort}
+                  alt="Icon 4"
+                  className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
+                />
+                <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
+                  HEMEN BAŞLA !
+                </h3>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
+                  İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
+                </p>
+                <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
+                  Kayıt olduğun hafta derslere başla, zaman kaybetmeden
+                  hedeflerine ulaş.
+                </p>
+              </div>
 
-            {/* Card 7 */}
-            <div
-              className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
-              style={{
-                width: "240px",
-                height: "280px",
-                borderRadius: "12px",
-                border: "1px solid #CFCFCF",
-                boxShadow: "4px 4px 2px 0px #FFAE0026",
-              }}
-            >
-              <img
-                src={iconuc}
-                alt="Icon 7"
-                className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
-              />
-              <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
-                HEMEN BAŞLA !
-              </h3>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
-                İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
-              </p>
-              <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
-                Kayıt olduğun hafta derslere başla, zaman kaybetmeden
-                hedeflerine ulaş.
-              </p>
-            </div>
+              {/* Card 5 */}
+              <div
+                className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
+                style={{
+                  width: "240px",
+                  height: "280px",
+                  borderRadius: "12px",
+                  border: "1px solid #CFCFCF",
+                  boxShadow: "4px 4px 2px 0px #FFAE0026",
+                }}
+              >
+                <img
+                  src={iconbir}
+                  alt="Icon 5"
+                  className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
+                />
+                <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
+                  HEMEN BAŞLA !
+                </h3>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
+                  İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
+                </p>
+                <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
+                  Kayıt olduğun hafta derslere başla, zaman kaybetmeden
+                  hedeflerine ulaş.
+                </p>
+              </div>
 
-            {/* Card 8 */}
-            <div
-              className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
-              style={{
-                width: "240px",
-                height: "280px",
-                borderRadius: "12px",
-                border: "1px solid #CFCFCF",
-                boxShadow: "4px 4px 2px 0px #FFAE0026",
-              }}
-            >
-              <img
-                src={icondort}
-                alt="Icon 8"
-                className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
-              />
-              <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
-                HEMEN BAŞLA !
-              </h3>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
-                İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
-              </p>
-              <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
-              <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
-                Kayıt olduğun hafta derslere başla, zaman kaybetmeden
-                hedeflerine ulaş.
-              </p>
+              {/* Card 6 */}
+              <div
+                className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
+                style={{
+                  width: "240px",
+                  height: "280px",
+                  borderRadius: "12px",
+                  border: "1px solid #CFCFCF",
+                  boxShadow: "4px 4px 2px 0px #FFAE0026",
+                }}
+              >
+                <img
+                  src={iconiki}
+                  alt="Icon 6"
+                  className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
+                />
+                <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
+                  HEMEN BAŞLA !
+                </h3>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
+                  İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
+                </p>
+                <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
+                  Kayıt olduğun hafta derslere başla, zaman kaybetmeden
+                  hedeflerine ulaş.
+                </p>
+              </div>
+
+              {/* Card 7 */}
+              <div
+                className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
+                style={{
+                  width: "240px",
+                  height: "280px",
+                  borderRadius: "12px",
+                  border: "1px solid #CFCFCF",
+                  boxShadow: "4px 4px 2px 0px #FFAE0026",
+                }}
+              >
+                <img
+                  src={iconuc}
+                  alt="Icon 7"
+                  className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
+                />
+                <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
+                  HEMEN BAŞLA !
+                </h3>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
+                  İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
+                </p>
+                <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
+                  Kayıt olduğun hafta derslere başla, zaman kaybetmeden
+                  hedeflerine ulaş.
+                </p>
+              </div>
+
+              {/* Card 8 */}
+              <div
+                className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
+                style={{
+                  width: "240px",
+                  height: "280px",
+                  borderRadius: "12px",
+                  border: "1px solid #CFCFCF",
+                  boxShadow: "4px 4px 2px 0px #FFAE0026",
+                }}
+              >
+                <img
+                  src={icondort}
+                  alt="Icon 8"
+                  className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4"
+                />
+                <h3 className="text-[#0E0E0E] font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center">
+                  HEMEN BAŞLA !
+                </h3>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center mb-2">
+                  İngilizce ya da Almanca öğrenmeye başlamak için bekleme.
+                </p>
+                <div className="w-2 h-2 bg-[#FFAE00] rounded-full mb-2"></div>
+                <p className="text-[#0E0E0E] text-xs sm:text-sm text-center">
+                  Kayıt olduğun hafta derslere başla, zaman kaybetmeden
+                  hedeflerine ulaş.
+                </p>
+              </div>
             </div>
           </div>
         </div>
