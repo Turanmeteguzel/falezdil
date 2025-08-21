@@ -1,62 +1,146 @@
 import React from "react";
+import { motion } from "framer-motion";
 import heroImage from "../assets/images/hero/hero.png";
 
 const Hero = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const imageVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <section className="min-h-[90vh] flex items-center bg-[#FEFDF9] -mt-5 pt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* Sol taraf - Yazı içeriği */}
-          <div className="space-y-4 sm:space-y-6 lg:space-y-8 text-left order-2 lg:order-1">
-            <div className="space-y-3 sm:space-y-4 lg:space-y-6">
-              <h1 className="font-lato text-left">
-                <span className="block text-[45px] font-light leading-tight text-gray-900 whitespace-nowrap">
+          <motion.div
+            className="space-y-3 sm:space-y-4 lg:space-y-6 xl:space-y-8 text-left order-2 lg:order-1"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div
+              className="space-y-2 sm:space-y-3 lg:space-y-4 xl:space-y-6"
+              variants={itemVariants}
+            >
+              <motion.h1
+                className="font-lato text-left"
+                variants={itemVariants}
+              >
+                <motion.span
+                  className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight text-gray-900"
+                  variants={itemVariants}
+                >
                   Antalya'nın Essiz Manzarasında
-    </span>        
-                <span className="block font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight sm:leading-[1.2] lg:leading-[1.2]">
+                </motion.span>
+                <motion.span
+                  className="block font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight sm:leading-[1.2] lg:leading-[1.2] mt-2 sm:mt-3"
+                  variants={itemVariants}
+                >
                   İngilizceye Açılan Kapınız!
-                </span>
-              </h1>
+                </motion.span>
+              </motion.h1>
 
-              <div className="space-y-2 sm:space-y-3 lg:space-y-4">
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-900 leading-relaxed font-lato text-left">
+              <motion.div
+                className="space-y-2 sm:space-y-3 lg:space-y-4"
+                variants={itemVariants}
+              >
+                <motion.p
+                  className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-900 leading-relaxed font-lato text-left"
+                  variants={itemVariants}
+                >
                   Bizce İngilizce sadece bir ders değil, hayatın içine
                   yerleşmesi gereken bir alışkanlık!
-                </p>
+                </motion.p>
 
-                <p className="text-xs sm:text-sm md:text-base lg:text-[18px] xl:text-[20px] text-[#0E0E0E] leading-relaxed font-light font-lato text-left">
+                <motion.p
+                  className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#0E0E0E] leading-relaxed font-light font-lato text-left"
+                  variants={itemVariants}
+                >
                   Antalya'da konuşma odaklı İngilizce eğitimi hiç bu kadar
                   keyifli ve etkili olmamıştı!
-                </p>
-                <p className="text-xs sm:text-sm md:text-base lg:text-[18px] xl:text-[20px] text-[#0E0E0E] leading-relaxed font-light font-lato text-left">
+                </motion.p>
+                <motion.p
+                  className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#0E0E0E] leading-relaxed font-light font-lato text-left"
+                  variants={itemVariants}
+                >
                   Butik sınıflarda, profesyonel eğitmenlerle kendi hızında
                   öğren, gerçek hayatta kullanabileceğin şekilde pratik yap.
-                </p>
-                <p className="text-xs sm:text-sm md:text-base lg:text-[18px] xl:text-[20px] text-[#0E0E0E] leading-relaxed font-light font-lato text-left">
+                </motion.p>
+                <motion.p
+                  className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#0E0E0E] leading-relaxed font-light font-lato text-left"
+                  variants={itemVariants}
+                >
                   Antalya Falez Dil Kursu olarak; ister özel ders, ister küçük
                   grup eğitimi tercih et, sana uygun programı birlikte
                   oluşturalım.
-                </p>
-              </div>
-            </div>
+                </motion.p>
+              </motion.div>
+            </motion.div>
 
-            <div className="pt-2 sm:pt-3 lg:pt-4">
-              <button className="w-full sm:w-auto px-4 sm:px-4 lg:px-6 py-2 sm:py-3 lg:py-4 bg-[#FFAE00] text-white font-semibold rounded-[4px] transition-all duration-500  text-sm sm:text-base lg:text-lg hover:bg-white hover:text-[#FFAE00] hover:border hover:border-[#FFAE00]">
+            <motion.div
+              className="pt-2 sm:pt-3 lg:pt-4"
+              variants={itemVariants}
+            >
+              <motion.button
+                className="w-full sm:w-auto px-3 sm:px-4 lg:px-6 py-2 sm:py-3 lg:py-4 bg-[#FFAE00] text-white font-semibold rounded-[4px] transition-all duration-500 text-sm sm:text-base lg:text-lg hover:bg-white hover:text-[#FFAE00] hover:border hover:border-[#FFAE00]"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 Deneme Dersi Oluştur
-              </button>
-            </div>
-          </div>
+              </motion.button>
+            </motion.div>
+          </motion.div>
 
           {/* Sağ taraf - Fotoğraf */}
-          <div className="relative order-1 lg:order-2 mb-8 lg:mb-0">
-            <div className="relative z-10">
+          <motion.div
+            className="relative order-1 lg:order-2 mb-6 sm:mb-8 lg:mb-0"
+            variants={imageVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div
+              className="relative z-10"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
               <img
                 src={heroImage}
                 alt="Antalya Falez Dil Kursu Hero"
-                className="w-full h-auto"
+                className="w-full h-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
               />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

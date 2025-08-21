@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import logo from "../assets/images/navbar/logo.jpg";
 
 const Navbar = () => {
@@ -8,52 +9,98 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const logoVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const menuItemVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <nav
-      className="bg-white fixed w-full top-0 z-50 h-20 shadow-lg"
+    <motion.nav
+      className="bg-white fixed w-full top-0 z-50 h-16 sm:h-18 lg:h-20 shadow-lg"
       style={{
         boxShadow: "0px 2px 2px 0px rgba(255, 174, 0, 0.15)",
       }}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       {/* Desktop Navbar - Fixed width like Figma */}
-      <div className="max-w-7xl mx-auto h-20">
-        <div className="flex justify-between items-center h-full px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto h-16 sm:h-18 lg:h-20">
+        <div className="flex justify-between items-center h-full px-3 sm:px-4 lg:px-6 xl:px-8">
           {/* Left side - Logo and Menu */}
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-8">
             {/* Logo */}
-            <img
+            <motion.img
               src={logo}
               alt="Antalya Falez Logo"
-              style={{ width: "248.3779296875px", height: "32px" }}
-              className="object-contain"
+              className="w-32 h-8 sm:w-40 sm:h-10 lg:w-48 lg:h-12 xl:w-56 xl:h-14 object-contain"
+              variants={logoVariants}
+              initial="hidden"
+              animate="visible"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             />
 
-            {/* Desktop Menu */}
-            <div className="flex items-baseline space-x-8">
-              <a
+            {/* Desktop Menu - Hidden on mobile, visible on lg and above */}
+            <div className="hidden lg:flex items-baseline space-x-6 lg:space-x-8">
+              <motion.a
                 href="#home"
-                className="hover:text-orange-500 px-3 py-2 text-sm font-medium transition-colors duration-300 relative"
+                className="hover:text-orange-500 px-2 sm:px-3 py-2 text-sm lg:text-base font-medium transition-colors duration-300 relative"
                 style={{
                   borderBottom: "1.84px solid #FFAE00",
                   color: "#0E0E0E",
                 }}
+                variants={menuItemVariants}
+                initial="hidden"
+                animate="visible"
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.3 }}
               >
                 Anasayfa
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="#about"
-                className="hover:text-orange-500 px-3 py-2 text-sm font-medium transition-colors duration-300"
+                className="hover:text-orange-500 px-2 sm:px-3 py-2 text-sm lg:text-base font-medium transition-colors duration-300"
                 style={{ color: "#0E0E0E" }}
+                variants={menuItemVariants}
+                initial="hidden"
+                animate="visible"
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.3, delay: 0.1 }}
               >
                 Hakkımızda
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="#blog"
-                className="hover:text-orange-500 px-3 py-2 text-sm font-medium transition-colors duration-300"
+                className="hover:text-orange-500 px-2 sm:px-3 py-2 text-sm lg:text-base font-medium transition-colors duration-300"
                 style={{ color: "#0E0E0E" }}
+                variants={menuItemVariants}
+                initial="hidden"
+                animate="visible"
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
               >
                 Blog
-              </a>
+              </motion.a>
             </div>
           </div>
         </div>
@@ -61,14 +108,18 @@ const Navbar = () => {
 
       {/* Mobile/Tablet Navbar - Responsive */}
       <div className="lg:hidden">
-        <div className="flex justify-between items-center h-16 px-4 sm:px-6">
+        <div className="flex justify-between items-center h-16 px-3 sm:px-4">
           {/* Logo only for mobile */}
           <div className="flex-shrink-0">
-            <img
+            <motion.img
               src={logo}
               alt="Antalya Falez Logo"
-              style={{ width: "186px", height: "24px" }}
-              className="object-contain"
+              className="w-28 h-7 sm:w-32 sm:h-8 object-contain"
+              variants={logoVariants}
+              initial="hidden"
+              animate="visible"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             />
           </div>
 
@@ -76,7 +127,7 @@ const Navbar = () => {
           <div></div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

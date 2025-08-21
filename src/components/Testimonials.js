@@ -1,14 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
   const testimonials = [
     {
       name: "Bahar Çetin",
-      initials: "BC",
+      initials: "BÇ",
       rating: 5,
       timeAgo: "27 Hafta önce",
       review:
-        "Öğretmenlerim Ömer ve Muhsin çok ilgili ve verimli bir şekilde ders işliyorlar. Yakın takip ve ek materyaller (haber siteleri, film/dizi önerileri, podcast'ler) ile İngilizce'yi hayatımıza entegre etmeye teşvik ediyorlar. Öğretmenlerin ilgisi ve sabrı sayesinde çok geliştim. Ceren Hanım'a da destekleri için teşekkür ederim. Profesyonel ve samimi eğitim için kesinlikle tavsiye ederim.",
+        "Antalya Falez Dil Kursu'nda 2 aydır eğitim alıyorum ve çok memnunum! Hocalarım Ömer ve Muhsin, dersleri hem keyifli hem de verimli bir şekilde işliyorlar. Bizi her zaman yakından takip ediyorlar dersi işleyip bizi bırakmıyorlar. Her gün okuyabileceğimiz haber siteleri , seviyeye uygun film dizi önerileri , bizlere gönderdikleri podcats önerileri ile derslerimiz olmadığı günlerde İngilizce ile içli dışlı olmamızı sağlıyorlar. Bu durumda benim daha hızlı öğrenmeme kendimi geliştirmeme neden oluyor.Öğrencilere olan ilgileri ve sabırları sayesinde kendimi çok geliştirdiğimi de hissediyorum. Ayrıca bizimle her zaman yakından ilgilenen ve güler yüzüyle destek olan Ceren Hanım'a da çok teşekkür ederim.",
     },
     {
       name: "Ali Osman Acet",
@@ -16,7 +17,23 @@ const Testimonials = () => {
       rating: 5,
       timeAgo: "30 Hafta önce",
       review:
+        "Antalya Falez Dil Kursu'nda 2 aydır eğitim alıyorum ve çok memnunum! Hocalarım Ömer ve Muhsin, dersleri hem keyifli hem de verimli bir şekilde işliyorlar. Bizi her zaman yakından takip ediyorlar dersi işleyip bizi bırakmıyorlar. Her gün okuyabileceğimiz haber siteleri , seviyeye uygun film dizi önerileri , bizlere gönderdikleri podcats önerileri ile derslerimiz olmadığı günlerde İngilizce ile içli dışlı olmamızı sağlıyorlar. Bu durumda benim daha hızlı öğrenmeme kendimi geliştirmeme neden oluyor.Öğrencilere olan ilgileri ve sabırları sayesinde kendimi çok geliştirdiğimi de hissediyorum. Ayrıca bizimle her zaman yakından ilgilenen ve güler yüzüyle destek olan Ceren Hanım'a da çok teşekkür ederim.",
+    },
+    {
+      name: "Bahar Çetin",
+      initials: "BC",
+      rating: 5,
+      timeAgo: "35 Hafta önce",
+      review:
         "Bana çok fazla fayda sağladı bütün öğretmenlerime teşekkür ederimm",
+    },
+    {
+      name: "Bahar Çetin",
+      initials: "BC",
+      rating: 5,
+      timeAgo: "35 Hafta önce",
+      review:
+        "Harika bir deneyim yaşadım, öğretmenlerim çok ilgiliydi ve İngilizce seviyem gerçekten çok gelişti.",
     },
     {
       name: "Bahar Çetin",
@@ -30,38 +47,122 @@ const Testimonials = () => {
 
   const renderStars = (rating) => {
     return Array.from({ length: 5 }, (_, index) => (
-      <svg
+      <motion.svg
         key={index}
-        className={`w-5 h-5 ${
+        className={`w-4 h-4 sm:w-5 sm:h-5 ${
           index < rating ? "text-yellow-400" : "text-gray-300"
         }`}
         fill="currentColor"
         viewBox="0 0 20 20"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: index * 0.1, duration: 0.3 }}
+        whileHover={{ scale: 1.1 }}
       >
         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-      </svg>
+      </motion.svg>
     ));
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const headerVariants = {
+    hidden: { y: -30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Bizi Tercih Eden, Öğrencilerimizin Gözünden
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
+        <motion.div
+          className="text-center mb-12 sm:mb-14 lg:mb-16"
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.h2
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-2 sm:mb-3"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            Bizi Tercih Eden,
+          </motion.h2>
+          <motion.h2
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Öğrencilerimizin Gözünden
+          </motion.h2>
+          <motion.p
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed px-2"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             Dil yolculuklarına bizimle başlayan öğrenciler, deneyimlerini samimi
             bir şekilde paylaştı. Sen de karar vermeden önce onların hikâyesine
             göz at
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {/* Google Reviews Summary */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8 text-center">
-            <div className="mb-6">
-              <svg className="w-16 h-16 mx-auto" viewBox="0 0 24 24">
+          <motion.div
+            className="bg-[#FEFDF9] rounded-lg shadow-sm border border-[#FFFFC7] p-4 sm:p-6 lg:p-8 text-center"
+            variants={itemVariants}
+            whileHover={{ y: -5 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.div
+              className="mb-4 sm:mb-6"
+              whileHover={{ rotate: 5 }}
+              transition={{ duration: 0.3 }}
+            >
+              <svg
+                className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mx-auto"
+                viewBox="0 0 24 24"
+              >
                 <path
                   fill="#4285F4"
                   d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -79,61 +180,85 @@ const Testimonials = () => {
                   d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
                 />
               </svg>
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+            </motion.div>
+            <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">
               Web'deki Yorumlar
             </h3>
-            <div className="flex justify-center items-center mb-2">
-              <span className="text-4xl font-bold text-gray-900 mr-2">5,0</span>
+            <div className="flex justify-center items-center mb-3 sm:mb-4">
+              <span className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mr-2 sm:mr-3">
+                5,0
+              </span>
               <div className="flex">{renderStars(5)}</div>
             </div>
-            <p className="text-gray-600 mb-6">58 yorum</p>
-            <div className="space-y-3">
-              <button className="w-full px-4 py-2 text-[#FFAE00] border border-[#FFAE00] rounded-lg hover:bg-[#FFAE00] hover:text-white transition-colors duration-200">
+            <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg">
+              58 yorum
+            </p>
+            <div className="space-y-2 sm:space-y-3">
+              <motion.button
+                className="w-full px-3 sm:px-4 lg:px-6 py-2 sm:py-3 text-sm sm:text-base text-[#FFAE00] border border-[#FFAE00] rounded-lg hover:bg-[#FFAE00] hover:text-white transition-colors duration-200 font-semibold"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 Tüm Yorumları Görüntüle
-              </button>
-              <button className="w-full px-4 py-2 bg-[#FFAE00] text-white rounded-lg hover:bg-[#FF8C00] transition-colors duration-200">
+              </motion.button>
+              <motion.button
+                className="w-full px-3 sm:px-4 lg:px-6 py-2 sm:py-3 text-sm sm:text-base bg-[#FFAE00] text-white rounded-lg hover:bg-[#FF8C00] transition-colors duration-200 font-semibold"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 Yorum Ekleyin
-              </button>
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Student Testimonials */}
           {testimonials.map((testimonial, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white rounded-lg shadow-sm border border-gray-100 p-6"
+              className="bg-white rounded-lg shadow-sm border border-[#CFCFCF] p-4 sm:p-6 lg:p-8"
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.3 }}
             >
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-purple-600 font-semibold text-lg">
+              <div className="flex items-center mb-4 sm:mb-6">
+                <motion.div
+                  className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-[#8F00FF99] rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="text-white font-semibold text-sm sm:text-base lg:text-lg">
                     {testimonial.initials}
                   </span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">
+                </motion.div>
+                <div className="flex-1 min-w-0">
+                  <h4 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-left text-sm sm:text-base lg:text-lg">
                     {testimonial.name}
                   </h4>
-                  <div className="flex items-center">
-                    {renderStars(testimonial.rating)}
+                  <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
+                    <div className="flex items-center">
+                      {renderStars(testimonial.rating)}
+                    </div>
+                    <span className="text-[#0E0E0E] text-xs sm:text-sm lg:text-base font-bold">
+                      {testimonial.timeAgo}
+                    </span>
                   </div>
                 </div>
               </div>
-              <p className="text-gray-500 text-sm mb-4">
-                {testimonial.timeAgo}
-              </p>
-              <p className="text-gray-700 text-sm leading-relaxed">
+              <motion.p
+                className="text-gray-700 text-xs sm:text-sm lg:text-base text-start leading-relaxed"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
                 {testimonial.review}
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
 export default Testimonials;
-
-
-

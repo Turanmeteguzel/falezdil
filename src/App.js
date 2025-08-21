@@ -4,8 +4,10 @@ import Hero from "./components/Hero";
 import "./App.css";
 import NewSection from "./components/NewSection";
 import LanguageProgram from "./components/LanguageProgram";
-import FAQ from "./components/FAQ";
+import ThreeCards from "./components/ThreeCards";
 import Testimonials from "./components/Testimonials";
+import FAQ from "./components/FAQ";
+import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 
 function App() {
@@ -17,8 +19,10 @@ function App() {
       </div>
       <NewSection />
       <LanguageProgram />
+      <ThreeCards />
       <Testimonials />
       <FAQ />
+      <ContactForm />
       <Footer />
     </div>
   );
