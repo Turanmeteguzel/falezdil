@@ -43,16 +43,15 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      {/* Desktop Navbar - Fixed width like Figma */}
       <div className="max-w-7xl mx-auto h-16 sm:h-18 lg:h-20">
-        <div className="flex justify-between items-center h-full px-3 sm:px-4 lg:px-6 xl:px-8">
+        <div className="flex justify-between items-center h-full px-1.5 sm:px-1.5 lg:px-1.5 xl:px-2">
           {/* Left side - Logo and Menu */}
           <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-8">
             {/* Logo */}
             <motion.img
               src={logo}
               alt="Antalya Falez Logo"
-              className="w-32 h-8 sm:w-40 sm:h-10 lg:w-48 lg:h-12 xl:w-56 xl:h-14 object-contain"
+              className="w-40 h-10 sm:w-44 sm:h-11 lg:w-48 lg:h-12 xl:w-56 xl:h-14 object-contain"
               variants={logoVariants}
               initial="hidden"
               animate="visible"
@@ -103,28 +102,11 @@ const Navbar = () => {
               </motion.a>
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* Mobile/Tablet Navbar - Responsive */}
-      <div className="lg:hidden">
-        <div className="flex justify-between items-center h-16 px-3 sm:px-4">
-          {/* Logo only for mobile */}
-          <div className="flex-shrink-0">
-            <motion.img
-              src={logo}
-              alt="Antalya Falez Logo"
-              className="w-28 h-7 sm:w-32 sm:h-8 object-contain"
-              variants={logoVariants}
-              initial="hidden"
-              animate="visible"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            />
+          {/* Right side - Mobile menu button or other elements can be added here */}
+          <div className="lg:hidden">
+            {/* Mobile menu button or other mobile-specific elements */}
           </div>
-
-          {/* Empty div for spacing */}
-          <div></div>
         </div>
       </div>
     </motion.nav>

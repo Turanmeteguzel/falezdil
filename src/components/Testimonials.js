@@ -100,17 +100,17 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
+    <section className="py-8 sm:py-12 lg:py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="text-center mb-12 sm:mb-14 lg:mb-16"
+          className="text-center mb-8 sm:mb-12 lg:mb-16"
           variants={headerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-2 sm:mb-3"
+            className="text-2xl text-left sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-2 sm:mb-3"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -119,7 +119,7 @@ const Testimonials = () => {
             Bizi Tercih Eden,
           </motion.h2>
           <motion.h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6"
+            className="text-2xl text-left sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -128,7 +128,7 @@ const Testimonials = () => {
             Öğrencilerimizin Gözünden
           </motion.h2>
           <motion.p
-            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed px-2"
+            className="text-sm text-left sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 max-w-2xl sm:max-w-3xl lg:max-w-4xl leading-relaxed px-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -151,14 +151,8 @@ const Testimonials = () => {
           <motion.div
             className="bg-[#FEFDF9] rounded-lg shadow-sm border border-[#FFFFC7] p-4 sm:p-6 lg:p-8 text-center"
             variants={itemVariants}
-            whileHover={{ y: -5 }}
-            transition={{ duration: 0.3 }}
           >
-            <motion.div
-              className="mb-4 sm:mb-6"
-              whileHover={{ rotate: 5 }}
-              transition={{ duration: 0.3 }}
-            >
+            <motion.div className="mb-4 sm:mb-6">
               <svg
                 className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mx-auto"
                 viewBox="0 0 24 24"
@@ -195,17 +189,13 @@ const Testimonials = () => {
             </p>
             <div className="space-y-2 sm:space-y-3">
               <motion.button
-                className="w-full px-3 sm:px-4 lg:px-6 py-2 sm:py-3 text-sm sm:text-base text-[#FFAE00] border border-[#FFAE00] rounded-lg hover:bg-[#FFAE00] hover:text-white transition-colors duration-200 font-semibold"
+                className="w-full px-1.5 sm:px-2 lg:px-3 py-2 sm:py-3 text-sm sm:text-base text-[#FFAE00] border border-[#FFAE00] rounded-lg hover:bg-white hover:text-[#FFAE00] hover:border-[#FFAE00] transition-all duration-300 font-semibold"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 Tüm Yorumları Görüntüle
               </motion.button>
-              <motion.button
-                className="w-full px-3 sm:px-4 lg:px-6 py-2 sm:py-3 text-sm sm:text-base bg-[#FFAE00] text-white rounded-lg hover:bg-[#FF8C00] transition-colors duration-200 font-semibold"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
+              <motion.button className="w-full px-1.5 sm:px-2 lg:px-3 py-2 sm:py-3 text-sm sm:text-base bg-[#FFAE00] text-white rounded-lg hover:bg-white hover:text-[#FFAE00] hover:border hover:border-[#FFAE00] transition-all duration-300 font-semibold">
                 Yorum Ekleyin
               </motion.button>
             </div>

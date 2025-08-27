@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import logoImage from "../assets/images/navbar/logo.jpg";
 
 const Footer = () => {
@@ -46,7 +47,7 @@ const Footer = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
     >
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
+      <div className="max-w-7xl mx-auto px-1 sm:px-1 lg:px-2">
         {/* Üst Bölüm - Logo, İsim ve İletişim Bilgileri */}
         <div className="flex flex-col lg:flex-row justify-between items-start mb-4 sm:mb-6 lg:mb-8 space-y-4 sm:space-y-6 lg:space-y-0">
           {/* Sol Tarafta Logo ve İsim */}
@@ -57,8 +58,6 @@ const Footer = () => {
                 src={logoImage}
                 alt="Antalya Falez Logo"
                 className="w-48 h-12 sm:w-56 sm:h-14 lg:w-64 lg:h-16 xl:w-80 xl:h-20 object-contain"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
               />
             </div>
           </motion.div>
@@ -172,30 +171,30 @@ const Footer = () => {
             className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3 lg:space-x-4 xl:space-x-6 text-xs sm:text-sm lg:text-base"
             variants={itemVariants}
           >
-            <motion.a
-              href="#"
-              className="text-gray-500 hover:text-gray-700 underline transition-colors duration-200 text-center sm:text-left"
-              whileHover={{ y: -1 }}
-              transition={{ duration: 0.2 }}
-            >
-              Privacy Policy
-            </motion.a>
-            <motion.a
-              href="#"
-              className="text-gray-500 hover:text-gray-700 underline transition-colors duration-200 text-center sm:text-left"
-              whileHover={{ y: -1 }}
-              transition={{ duration: 0.2 }}
-            >
-              Terms of Services
-            </motion.a>
-            <motion.a
-              href="#"
-              className="text-gray-500 hover:text-gray-700 underline transition-colors duration-200 text-center sm:text-left"
-              whileHover={{ y: -1 }}
-              transition={{ duration: 0.2 }}
-            >
-              Cookies Settings
-            </motion.a>
+            <motion.div whileHover={{ y: -1 }} transition={{ duration: 0.2 }}>
+              <Link
+                to="/privacy-policy"
+                className="text-gray-500 hover:text-gray-700 underline transition-colors duration-200 text-center sm:text-left"
+              >
+                Privacy Policy
+              </Link>
+            </motion.div>
+            <motion.div whileHover={{ y: -1 }} transition={{ duration: 0.2 }}>
+              <Link
+                to="/terms-of-service"
+                className="text-gray-500 hover:text-gray-700 underline transition-colors duration-200 text-center sm:text-left"
+              >
+                Terms of Services
+              </Link>
+            </motion.div>
+            <motion.div whileHover={{ y: -1 }} transition={{ duration: 0.2 }}>
+              <Link
+                to="/cookies-settings"
+                className="text-gray-500 hover:text-gray-700 underline transition-colors duration-200 text-center sm:text-left"
+              >
+                Cookies Settings
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </div>

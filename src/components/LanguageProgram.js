@@ -4,10 +4,10 @@ import checkFat from "../assets/images/CheckFat.png";
 
 const LanguageProgram = () => {
   return (
-    <div className="py-12 sm:py-16 lg:py-20 bg-[#FEFDF9]">
+    <div className="py-8 sm:py-12 lg:py-20 bg-[#FEFDF9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-left mb-12 sm:mb-16 lg:mb-20">
+        <div className="text-left mb-8 sm:mb-12 lg:mb-20">
           <h1 className="text-4xl font-normal text-gray-800 mb-4 sm:mb-6 leading-tight">
             Senin İçin En Uygun İngilizce Veya Almanca,
             <br />
@@ -69,12 +69,12 @@ const LanguageProgram = () => {
           </div>
 
           {/* Right Column - Coffee Image */}
-          <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-8 lg:mb-0">
-            <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl h-auto">
+          <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-8 lg:mb-0 h-full">
+            <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl h-full flex flex-col justify-center">
               <img
                 src={coffeImage}
                 alt="Coffee and language learning"
-                className="w-full h-auto object-contain"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
@@ -96,7 +96,7 @@ const LanguageProgram = () => {
                   Sen sadece öğrenmeye odaklan.
                 </p>
               </div>
-              <button className="w-full sm:w-auto bg-[#FFAE00] hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-colors duration-200 shadow-lg">
+              <button className="w-full sm:w-auto bg-[#FFAE00] hover:bg-white hover:text-[#FFAE00] hover:border hover:border-[#FFAE00] text-white font-bold py-3 sm:py-4 px-3 sm:px-4 rounded-lg text-base sm:text-lg transition-all duration-300 shadow-lg">
                 Ücretsiz Tanışma Görüşmesi Planla
               </button>
             </div>

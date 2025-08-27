@@ -1,114 +1,156 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const FAQ = () => {
   const [openItems, setOpenItems] = useState({});
 
-  const toggleItem = (index) => {
+  const toggleItem = (id) => {
     setOpenItems((prev) => ({
       ...prev,
-      [index]: !prev[index],
+      [id]: !prev[id],
     }));
   };
 
   const faqData = [
     {
+      id: "program",
       question: "Ders programımı nasıl belirleyebilirim?",
       answer:
-        "Kayıt sonrası danışman görüşmesi ve deneme dersine göre size özel haftalık ders planı oluşturulur.",
+        "Kayıt sonrası danışman görüşmesi ve deneme dersine göre size özel haftalık ders planı oluşturulur. Öğrenme hedefleriniz, mevcut seviyeniz ve müsait zamanlarınız göz önünde bulundurularak kişiselleştirilmiş bir program hazırlanır.",
     },
     {
+      id: "duration",
       question: "Dersler süreleri nedir?",
       answer:
-        "Dersler genellikle 45-60 dakika sürmektedir. Programınıza göre bu süreler değişebilir.",
+        "Dersler genellikle 45-60 dakika sürmektedir. Programınıza göre bu süreler değişebilir. Yoğun programlar için 90 dakikalık dersler de mevcuttur. Ders süreleri öğrencinin ihtiyaçlarına ve program yoğunluğuna göre ayarlanır.",
     },
     {
+      id: "cancellation",
       question: "Dersimi kaç gün öncesine kadar iptal edebilirim?",
-      answer: "Derslerinizi en az 24 saat öncesine kadar iptal edebilirsiniz.",
+      answer:
+        "Derslerinizi en az 24 saat öncesine kadar iptal edebilirsiniz. Acil durumlar için 12 saat öncesine kadar iptal hakkınız bulunmaktadır. Düzenli iptaller için önceden bilgilendirme yapmanız önerilir.",
     },
     {
+      id: "makeup",
       question: "İptal ettiğim dersi telafi alabilir miyim?",
       answer:
-        "Evet, iptal ettiğiniz dersleri uygun zamanlarda telafi edebilirsiniz.",
+        "Evet, iptal ettiğiniz dersleri uygun zamanlarda telafi edebilirsiniz. Telafi dersleri genellikle aynı hafta içinde veya bir sonraki haftada planlanır. Telafi derslerinin kayıp olmaması için düzenli takip yapılır.",
     },
     {
+      id: "change",
       question: "Kursa başladıktan sonra programımı değiştirebilir miyim?",
       answer:
-        "Evet, kursa başladıktan sonra da programınızı ihtiyaçlarınıza göre değiştirebiliriz.",
+        "Evet, kursa başladıktan sonra da programınızı ihtiyaçlarınıza göre değiştirebiliriz. Program değişiklikleri için danışman görüşmesi yapılır ve yeni programınız en kısa sürede uygulanır. Esneklik bizim önceliğimizdir.",
     },
     {
+      id: "age",
       question: "Hangi yaş gruplarına eğitim veriyorsunuz?",
       answer:
-        "7 yaşından itibaren tüm yaş gruplarına uygun eğitim programları sunuyoruz.",
+        "7 yaşından itibaren tüm yaş gruplarına uygun eğitim programları sunuyoruz. Çocuklar için oyun temelli öğrenme, gençler için modern metodlar, yetişkinler için pratik odaklı yaklaşımlar kullanıyoruz. Her yaş grubuna özel müfredat ve materyaller hazırlanır.",
     },
     {
+      id: "groups",
       question: "3-4 kişilik sınıflar nasıl oluşturuluyor?",
       answer:
-        "Seviye belirleme testi sonrası benzer seviyedeki öğrencilerle küçük gruplar oluşturulur.",
+        "Seviye belirleme testi sonrası benzer seviyedeki öğrencilerle küçük gruplar oluşturulur. Yaş, hedef ve öğrenme hızı da göz önünde bulundurulur. Grup uyumu için önceden tanışma dersi yapılır ve gerekirse grup değişikliği yapılabilir.",
     },
     {
+      id: "exams",
       question: "IELTS / Goethe / TestDaF gibi sınavlara hazırlanabilir miyim?",
-      answer: "Evet, bu sınavlara özel hazırlık programlarımız bulunmaktadır.",
+      answer:
+        "Evet, bu sınavlara özel hazırlık programlarımız bulunmaktadır. Her sınav için özel müfredat, deneme sınavları ve strateji eğitimi veriyoruz. Sınav tarihlerine göre yoğunlaştırılmış programlar da mevcuttur.",
     },
     {
+      id: "missed",
       question: "Dersleri kaçırırsam ne olur?",
-      answer: "Kaçırdığınız dersleri telafi etme imkanınız vardır.",
+      answer:
+        "Kaçırdığınız dersleri telafi etme imkanınız vardır. Kaçırılan dersler için özel materyaller ve ödevler gönderilir. Bir sonraki derste konular tekrar edilir ve eksik kalan kısımlar tamamlanır.",
     },
     {
+      id: "trial",
       question: "Deneme dersi ücretli mi?",
       answer:
-        "Deneme dersimiz ücretsizdir, böylece programımızı deneyimleyebilirsiniz.",
+        "Deneme dersimiz ücretsizdir, böylece programımızı deneyimleyebilirsiniz. Deneme dersinde seviye belirleme yapılır, öğretmen tanışması gerçekleşir ve size özel program önerisi sunulur. Herhangi bir yükümlülük olmadan deneyim kazanabilirsiniz.",
     },
   ];
 
   return (
-    <section className="py-20 bg-[#FEFDF9]">
+    <section className="py-8 sm:py-12 lg:py-20 bg-[#FEFDF9]">
+      <style jsx>{`
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+            max-height: 0;
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+            max-height: 200px;
+          }
+        }
+      `}</style>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        <motion.div 
+          className="text-left mb-8 sm:mb-12 lg:mb-16"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-inter">
             Merak Ettiklerinizi Cevaplıyoruz
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Dil yolculuklarına bizimle başlayan öğrenciler, deneyimlerini samimi
-            bir şekilde paylaştı. Sen de karar vermeden önce onların hikâyesine
-            göz at
+          <p className="text-lg text-gray-600 max-w-3xl leading-relaxed font-inter">
+            Sıkça sorulan sorulara hızlıca cevap bulun. Eğer aradığınız cevap
+            burada yoksa, bizimle iletişime geçmekten çekinmeyin.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
           {faqData.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden"
+            <motion.div
+              key={item.id}
+              className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden self-start"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <button
-                onClick={() => toggleItem(index)}
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                onClick={() => toggleItem(item.id)}
+                className="w-full px-3 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
               >
-                <span className="font-medium text-gray-900 text-sm sm:text-base">
+                <span className="font-medium text-gray-900 text-sm sm:text-base text-left">
                   {item.question}
                 </span>
                 <div
-                  className={`w-6 h-6 rounded-full border-2 border-[#FFAE00] flex items-center justify-center transition-transform duration-200 ${
-                    openItems[index] ? "rotate-180" : ""
-                  }`}
+                  className={`w-6 h-6 rounded-full border-2 border-[#FFAE00] flex items-center justify-center transition-all duration-200`}
                 >
-                  <div
-                    className={`w-3 h-0.5 bg-[#FFAE00] transition-all duration-200 ${
-                      openItems[index] ? "rotate-90" : ""
-                    }`}
-                  ></div>
-                  <div className="w-3 h-0.5 bg-[#FFAE00] absolute"></div>
+                  {openItems[item.id] ? (
+                    // Eksi ikonu (açık durum)
+                    <div className="w-3 h-0.5 bg-[#FFAE00]"></div>
+                  ) : (
+                    // Artı ikonu (kapalı durum)
+                    <>
+                      <div className="w-3 h-0.5 bg-[#FFAE00] absolute"></div>
+                      <div className="w-0.5 h-3 bg-[#FFAE00] absolute"></div>
+                    </>
+                  )}
                 </div>
               </button>
 
-              {openItems[index] && (
-                <div className="px-6 pb-4">
-                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              {openItems[item.id] && (
+                <div
+                  className="px-3 pb-4 overflow-hidden transition-all duration-300 ease-in-out"
+                  style={{
+                    animation: "slideDown 0.3s ease-out forwards",
+                  }}
+                >
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-left">
                     {item.answer}
                   </p>
                 </div>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -117,6 +159,3 @@ const FAQ = () => {
 };
 
 export default FAQ;
-
-
-

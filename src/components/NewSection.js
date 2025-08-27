@@ -1,12 +1,52 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import iconbir from "../assets/images/hero/iconbir.png";
 import iconiki from "../assets/images/hero/iconiki.png";
 import iconuc from "../assets/images/hero/iconuc.png";
 import icondort from "../assets/images/hero/icondort.png";
 
 const NewSection = () => {
+  const scrollContainerRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const checkScrollButtons = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } =
+        scrollContainerRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+    }
+  };
+
+  useEffect(() => {
+    checkScrollButtons();
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", checkScrollButtons);
+      return () => container.removeEventListener("scroll", checkScrollButtons);
+    }
+  }, []);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: -264,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: 264,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white">
+    <section className="py-8 sm:py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-left space-y-4 sm:space-y-6 lg:space-y-8">
           <h1 className="font-lato">
@@ -45,29 +85,18 @@ const NewSection = () => {
           </p>
 
           <div className="relative">
-            {/* Scroll Indicators */}
-            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-r from-white via-white to-transparent w-8 h-16 flex items-center justify-center">
-              <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center opacity-60">
-                <span className="text-gray-600 text-xs">←</span>
-              </div>
-            </div>
-
-            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-l from-white via-white to-transparent w-8 h-16 flex items-center justify-center">
-              <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center opacity-60">
-                <span className="text-gray-600 text-xs">→</span>
-              </div>
-            </div>
-
+            {/* Cards Container */}
             <div
-              className="flex space-x-3 sm:space-x-4 lg:space-x-6 overflow-x-auto pb-4 scrollbar-hide px-8"
+              ref={scrollContainerRef}
+              className="flex space-x-3 sm:space-x-4 lg:space-x-6 overflow-x-auto pb-4 scrollbar-hide"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               {/* Card 1 */}
               <div
                 className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
                 style={{
-                  width: "240px",
-                  height: "280px",
+                  width: "280px",
+                  height: "306px",
                   borderRadius: "12px",
                   border: "1px solid #CFCFCF",
                   boxShadow: "4px 4px 2px 0px #FFAE0026",
@@ -95,8 +124,8 @@ const NewSection = () => {
               <div
                 className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
                 style={{
-                  width: "240px",
-                  height: "280px",
+                  width: "280px",
+                  height: "306px",
                   borderRadius: "12px",
                   border: "1px solid #CFCFCF",
                   boxShadow: "4px 4px 2px 0px #FFAE0026",
@@ -124,8 +153,8 @@ const NewSection = () => {
               <div
                 className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
                 style={{
-                  width: "240px",
-                  height: "280px",
+                  width: "280px",
+                  height: "306px",
                   borderRadius: "12px",
                   border: "1px solid #CFCFCF",
                   boxShadow: "4px 4px 2px 0px #FFAE0026",
@@ -153,8 +182,8 @@ const NewSection = () => {
               <div
                 className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
                 style={{
-                  width: "240px",
-                  height: "280px",
+                  width: "280px",
+                  height: "306px",
                   borderRadius: "12px",
                   border: "1px solid #CFCFCF",
                   boxShadow: "4px 4px 2px 0px #FFAE0026",
@@ -182,8 +211,8 @@ const NewSection = () => {
               <div
                 className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
                 style={{
-                  width: "240px",
-                  height: "280px",
+                  width: "280px",
+                  height: "306px",
                   borderRadius: "12px",
                   border: "1px solid #CFCFCF",
                   boxShadow: "4px 4px 2px 0px #FFAE0026",
@@ -211,8 +240,8 @@ const NewSection = () => {
               <div
                 className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
                 style={{
-                  width: "240px",
-                  height: "280px",
+                  width: "280px",
+                  height: "306px",
                   borderRadius: "12px",
                   border: "1px solid #CFCFCF",
                   boxShadow: "4px 4px 2px 0px #FFAE0026",
@@ -240,8 +269,8 @@ const NewSection = () => {
               <div
                 className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
                 style={{
-                  width: "240px",
-                  height: "280px",
+                  width: "280px",
+                  height: "306px",
                   borderRadius: "12px",
                   border: "1px solid #CFCFCF",
                   boxShadow: "4px 4px 2px 0px #FFAE0026",
@@ -269,8 +298,8 @@ const NewSection = () => {
               <div
                 className="bg-white flex flex-col items-center justify-center p-4 sm:p-6 flex-shrink-0"
                 style={{
-                  width: "240px",
-                  height: "280px",
+                  width: "280px",
+                  height: "306px",
                   borderRadius: "12px",
                   border: "1px solid #CFCFCF",
                   boxShadow: "4px 4px 2px 0px #FFAE0026",
@@ -293,6 +322,32 @@ const NewSection = () => {
                   hedeflerine ulaş.
                 </p>
               </div>
+            </div>
+
+            {/* Simple Navigation Buttons */}
+            <div className="flex justify-center space-x-4 mt-6">
+              <button
+                onClick={scrollLeft}
+                disabled={!canScrollLeft}
+                className={`px-3 py-3 text-sm font-medium rounded-lg transition-all duration-200 ${
+                  canScrollLeft
+                    ? "bg-[#FFAE00] hover:bg-white border border-[#FFAE00] hover:text-[#FFAE00] text-white shadow-lg"
+                    : "bg-[#FFAE00] text-white border  border-[#FFAE00] cursor-not-allowed"
+                }`}
+              >
+                ←
+              </button>
+              <button
+                onClick={scrollRight}
+                disabled={!canScrollRight}
+                className={`px-3 py-3 text-sm font-medium rounded-lg transition-all duration-200 ${
+                  canScrollRight
+                    ? "bg-[#FFAE00] hover:bg-white border border-[#FFAE00] hover:text-[#FFAE00] text-white shadow-lg"
+                    : "bg-[#FFAE00] text-white border  border-[#FFAE00] cursor-not-allowed"
+                }`}
+              >
+                →
+              </button>
             </div>
           </div>
         </div>

@@ -44,7 +44,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* Sol taraf - Yazı içeriği */}
           <motion.div
-            className="space-y-3 sm:space-y-4 lg:space-y-6 xl:space-y-8 text-left order-2 lg:order-1"
+            className="space-y-3 sm:space-y-4 lg:space-y-6 xl:space-y-8 text-left order-1 lg:order-1"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -58,13 +58,13 @@ const Hero = () => {
                 variants={itemVariants}
               >
                 <motion.span
-                  className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight text-gray-900"
+                  className="block font-light text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight sm:leading-[1.2] lg:leading-[1.2] mt-2 sm:mt-3 font-lato"
                   variants={itemVariants}
                 >
-                  Antalya'nın Essiz Manzarasında
+                  Antalya'nın Eşsiz Manzarasında
                 </motion.span>
                 <motion.span
-                  className="block font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight sm:leading-[1.2] lg:leading-[1.2] mt-2 sm:mt-3"
+                  className="block font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight sm:leading-[1.2] lg:leading-[1.2] mt-2 sm:mt-3 font-lato"
                   variants={itemVariants}
                 >
                   İngilizceye Açılan Kapınız!
@@ -72,11 +72,11 @@ const Hero = () => {
               </motion.h1>
 
               <motion.div
-                className="space-y-2 sm:space-y-3 lg:space-y-4"
+                className="space-y-1 sm:space-y-1 lg:space-y-2"
                 variants={itemVariants}
               >
                 <motion.p
-                  className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-900 leading-relaxed font-lato text-left"
+                  className="text-xs sm:text-sm md:text-base lg:text-lg mb-6 xl:text-xl text-[#0E0E0E] leading-relaxed font-light font-lato text-left"
                   variants={itemVariants}
                 >
                   Bizce İngilizce sadece bir ders değil, hayatın içine
@@ -113,8 +113,7 @@ const Hero = () => {
               variants={itemVariants}
             >
               <motion.button
-                className="w-full sm:w-auto px-3 sm:px-4 lg:px-6 py-2 sm:py-3 lg:py-4 bg-[#FFAE00] text-white font-semibold rounded-[4px] transition-all duration-500 text-sm sm:text-base lg:text-lg hover:bg-white hover:text-[#FFAE00] hover:border hover:border-[#FFAE00]"
-                whileHover={{ scale: 1.05 }}
+                className="w-full sm:w-auto px-3 sm:px-4 lg:px-6 py-2 sm:py-3 lg:py-4 bg-[#FFAE00] text-white font-semibold rounded-[4px] transition-all duration-300 text-xs sm:text-sm lg:text-md hover:bg-white hover:text-[#FFAE00] hover:border hover:border-[#FFAE00] font-lato"
                 whileTap={{ scale: 0.95 }}
               >
                 Deneme Dersi Oluştur
@@ -124,14 +123,13 @@ const Hero = () => {
 
           {/* Sağ taraf - Fotoğraf */}
           <motion.div
-            className="relative order-1 lg:order-2 mb-6 sm:mb-8 lg:mb-0"
+            className="relative order-2 lg:order-2 mb-6 sm:mb-8 lg:mb-0"
             variants={imageVariants}
             initial="hidden"
             animate="visible"
           >
             <motion.div
               className="relative z-10"
-              whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
               <img

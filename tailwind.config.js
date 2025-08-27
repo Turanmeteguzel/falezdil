@@ -5,6 +5,12 @@ module.exports = {
     extend: {
       fontFamily: {
         lato: ["Lato", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+      },
+      fontWeight: {
+        light: "300",
+        normal: "400",
+        bold: "700",
       },
     },
   },
