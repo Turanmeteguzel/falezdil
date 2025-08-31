@@ -49,7 +49,7 @@ const Testimonials = () => {
     return Array.from({ length: 5 }, (_, index) => (
       <motion.svg
         key={index}
-        className={`w-4 h-4 sm:w-5 sm:h-5 ${
+        className={`w-8 h-8 ${
           index < rating ? "text-yellow-400" : "text-gray-300"
         }`}
         fill="currentColor"
@@ -100,17 +100,17 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-8 sm:py-12 lg:py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="h-screen bg-white py-8 sm:py-12 lg:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
         <motion.div
-          className="text-center mb-8 sm:mb-12 lg:mb-16"
+          className="text-left mb-4 sm:mb-6 lg:mb-8"
           variants={headerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h2
-            className="text-2xl text-left sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-2 sm:mb-3"
+            className="text-4xl font-light text-[#0E0E0E] mb-2 sm:mb-3 font-lato leading-none tracking-normal capitalize"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -119,7 +119,7 @@ const Testimonials = () => {
             Bizi Tercih Eden,
           </motion.h2>
           <motion.h2
-            className="text-2xl text-left sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6"
+            className="text-4xl font-semibold text-[#0E0E0E] mb-4 sm:mb-6 font-lato leading-none tracking-normal capitalize"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -128,7 +128,7 @@ const Testimonials = () => {
             Öğrencilerimizin Gözünden
           </motion.h2>
           <motion.p
-            className="text-sm text-left sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 max-w-2xl sm:max-w-3xl lg:max-w-4xl leading-relaxed px-2"
+            className="text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-[30px] tracking-normal px-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -175,21 +175,21 @@ const Testimonials = () => {
                 />
               </svg>
             </motion.div>
-            <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">
+            <h3 className="text-xl font-normal text-[#0E0E0E] mb-3 sm:mb-4 font-lato leading-none tracking-normal text-center">
               Web'deki Yorumlar
             </h3>
             <div className="flex justify-center items-center mb-3 sm:mb-4">
-              <span className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mr-2 sm:mr-3">
+              <span className="text-3xl font-normal text-gray-900 mr-2 sm:mr-3 font-lato leading-[32px] tracking-normal">
                 5,0
               </span>
               <div className="flex">{renderStars(5)}</div>
             </div>
-            <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg">
+            <p className="text-base font-light text-[#0E0E0E] mb-4 sm:mb-6 font-lato leading-none tracking-normal text-center">
               58 yorum
             </p>
             <div className="space-y-2 sm:space-y-3">
               <motion.button
-                className="w-full px-1.5 sm:px-2 lg:px-3 py-2 sm:py-3 text-sm sm:text-base text-[#FFAE00] border border-[#FFAE00] rounded-lg hover:bg-white hover:text-[#FFAE00] hover:border-[#FFAE00] transition-all duration-300 font-semibold"
+                className="w-full px-1.5 sm:px-2 lg:px-3 py-2 sm:py-3 text-sm sm:text-base text-[#FFAE00]  rounded-lg hover:bg-white transition-all duration-300 font-semibold"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -205,37 +205,37 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-lg shadow-sm border border-[#CFCFCF] p-4 sm:p-6 lg:p-8"
+              className="bg-white rounded-lg shadow-sm border border-[#CFCFCF] p-3 sm:p-4 lg:p-5 max-w-sm"
               variants={itemVariants}
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="flex items-center mb-4 sm:mb-6">
+              <div className="flex items-center mb-2 sm:mb-3">
                 <motion.div
-                  className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-[#8F00FF99] rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0"
+                  className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-[#8F00FF99] rounded-full flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <span className="text-white font-semibold text-sm sm:text-base lg:text-lg">
+                  <span className="text-white font-semibold text-xs sm:text-sm lg:text-base">
                     {testimonial.initials}
                   </span>
                 </motion.div>
                 <div className="flex-1 min-w-0">
-                  <h4 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-left text-sm sm:text-base lg:text-lg">
+                  <h4 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-left text-xs sm:text-sm lg:text-base">
                     {testimonial.name}
                   </h4>
                   <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
                     <div className="flex items-center">
                       {renderStars(testimonial.rating)}
                     </div>
-                    <span className="text-[#0E0E0E] text-xs sm:text-sm lg:text-base font-bold">
+                    <span className="text-[#0E0E0E] text-xs sm:text-xs lg:text-sm font-bold">
                       {testimonial.timeAgo}
                     </span>
                   </div>
                 </div>
               </div>
               <motion.p
-                className="text-gray-700 text-xs sm:text-sm lg:text-base text-start leading-relaxed"
+                className="text-gray-700 text-xs sm:text-xs lg:text-sm text-start leading-tight"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.1 }}

@@ -91,18 +91,19 @@ const FAQ = () => {
         }
       `}</style>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           className="text-left mb-8 sm:mb-12 lg:mb-16"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-inter">
+          <h2 className="text-4xl font-semibold text-gray-900 mb-6 font-lato leading-none tracking-normal capitalize">
             Merak Ettiklerinizi Cevaplıyoruz
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl leading-relaxed font-inter">
-            Sıkça sorulan sorulara hızlıca cevap bulun. Eğer aradığınız cevap
-            burada yoksa, bizimle iletişime geçmekten çekinmeyin.
+          <p className="text-xl text-gray-600 max-w-4xl font-lato font-light leading-[30px] tracking-normal">
+            Dil yolculuklarına bizimle baslayan ogrenciler, deneyimlerini samimi
+            bir sekilde paylastı. Sen de karar vermeden once onların hikayesine
+            goz at
           </p>
         </motion.div>
 
@@ -119,7 +120,7 @@ const FAQ = () => {
                 onClick={() => toggleItem(item.id)}
                 className="w-full px-3 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
               >
-                <span className="font-medium text-gray-900 text-sm sm:text-base text-left">
+                <span className="font-medium text-gray-900 text-xl font-lato leading-[26px] tracking-normal text-left">
                   {item.question}
                 </span>
                 <div
@@ -145,7 +146,7 @@ const FAQ = () => {
                     animation: "slideDown 0.3s ease-out forwards",
                   }}
                 >
-                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-left">
+                  <p className="text-gray-600 text-sm font-lato font-light leading-none tracking-normal text-left">
                     {item.answer}
                   </p>
                 </div>

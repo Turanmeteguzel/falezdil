@@ -61,7 +61,7 @@ const VideoSection = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h1
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal text-gray-800 mb-3 sm:mb-4 lg:mb-6 leading-tight font-inter"
+            className="text-4xl font-light text-gray-800 mb-3 sm:mb-4 lg:mb-6 font-lato leading-none tracking-normal capitalize"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -69,12 +69,12 @@ const VideoSection = () => {
           >
             Bir Dersten Fazlası:
             <br className="hidden sm:block" />
-            <span className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+            <span className="text-4xl font-semibold text-[#0E0E0E] font-lato leading-none tracking-normal capitalize">
               Öğrenmenin Yeni Hali
             </span>
           </motion.h1>
           <motion.p
-            className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-2xl sm:max-w-3xl lg:max-w-4xl leading-relaxed font-inter"
+            className="text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-[30px] tracking-normal"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
