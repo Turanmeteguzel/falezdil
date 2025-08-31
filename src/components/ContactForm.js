@@ -44,10 +44,10 @@ const ContactForm = () => {
     <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-left mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-inter">
+          <h2 className="text-4xl font-semibold text-gray-900 mb-6 font-lato leading-none tracking-normal capitalize">
             Bizimle İletişime Geçin
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl leading-relaxed font-inter">
+          <p className="text-xl text-gray-600 max-w-4xl font-lato font-light leading-[30px] tracking-normal">
             Dil öğrenme yolculuğunuza başlamak için hemen iletişime geçin. Size
             en uygun programı birlikte belirleyelim.
           </p>
@@ -77,7 +77,7 @@ const ContactForm = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-[#FFAE00]/30 focus:border-[#FFAE00] transition-all duration-300 hover:border-[#FFAE00]/50 font-inter"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-[4px] focus:ring-4 focus:ring-[#FFAE00]/30 focus:border-[#FFAE00] transition-all duration-300 hover:border-[#FFAE00]/50 font-inter"
                       placeholder="Adınız ve soyadınız"
                     />
                   </div>
@@ -97,7 +97,7 @@ const ContactForm = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-[#FFAE00]/30 focus:border-[#FFAE00] transition-all duration-300 hover:border-[#FFAE00]/50 font-inter"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-[4px] focus:ring-4 focus:ring-[#FFAE00]/30 focus:border-[#FFAE00] transition-all duration-300 hover:border-[#FFAE00]/50 font-inter"
                       placeholder="ornek@email.com"
                     />
                   </div>
@@ -116,7 +116,7 @@ const ContactForm = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2  border-gray-200 rounded-xl focus:ring-4 focus:ring-[#FFAE00]/30 focus:border-[#FFAE00] transition-all duration-300 hover:border-[#FFAE00]/50 font-inter"
+                      className="w-full px-4 py-3 border-2  border-gray-200 rounded-[4px] focus:ring-4 focus:ring-[#FFAE00]/30 focus:border-[#FFAE00] transition-all duration-300 hover:border-[#FFAE00]/50 font-inter"
                       placeholder="05XX XXX XX XX"
                     />
                   </div>
@@ -135,7 +135,7 @@ const ContactForm = () => {
                       value={formData.language}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2  border-gray-200 rounded-xl focus:ring-4 focus:ring-[#FFAE00]/30 focus:border-[#FFAE00] transition-all duration-300 hover:border-[#FFAE00]/50 font-inter"
+                      className="w-full px-4 py-3 border-2  border-gray-200 rounded-[4px] focus:ring-4 focus:ring-[#FFAE00]/30 focus:border-[#FFAE00] transition-all duration-300 hover:border-[#FFAE00]/50 font-inter"
                     >
                       <option value="">Dil seçiniz</option>
                       <option value="ingilizce">İngilizce</option>
@@ -162,7 +162,7 @@ const ContactForm = () => {
                       name="level"
                       value={formData.level}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-[#FFAE00]/30 focus:border-[#FFAE00] transition-all duration-300 hover:border-[#FFAE00]/50 font-inter"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-[4px] focus:ring-4 focus:ring-[#FFAE00]/30 focus:border-[#FFAE00] transition-all duration-300 hover:border-[#FFAE00]/50 font-inter"
                     >
                       <option value="">Seviye seçiniz</option>
                       <option value="baslangic">Başlangıç (A1)</option>
@@ -186,7 +186,7 @@ const ContactForm = () => {
                     <select
                       id="hours"
                       name="hours"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-[#FFAE00]/30 focus:border-[#FFAE00] transition-all duration-300 hover:border-[#FFAE00]/50 font-inter"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-[4px] focus:ring-4 focus:ring-[#FFAE00]/30 focus:border-[#FFAE00] transition-all duration-300 hover:border-[#FFAE00]/50 font-inter"
                     >
                       <option value="">Saat seçiniz</option>
                       <option value="2">2 saat</option>
@@ -212,7 +212,7 @@ const ContactForm = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={3}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-[#FFAE00]/30 focus:border-[#FFAE00] transition-all duration-300 hover:border-[#FFAE00]/50 font-inter"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-[4px] focus:ring-4 focus:ring-[#FFAE00]/30 focus:border-[#FFAE00] transition-all duration-300 hover:border-[#FFAE00]/50 font-inter"
                     placeholder="Özel istekleriniz, sorularınız veya ek bilgilerinizi buraya yazabilirsiniz..."
                   />
                 </div>
@@ -250,7 +250,7 @@ const ContactForm = () => {
 
                 {/* Submit Button */}
                 <div className="text-center">
-                  <motion.button className="w-full px-1.5 sm:px-2 lg:px-3 py-2 sm:py-3 text-sm sm:text-base bg-[#FFAE00] text-white rounded-lg hover:bg-white hover:text-[#FFAE00] hover:border hover:border-[#FFAE00]  duration-300 font-semibold">
+                  <motion.button className="w-full px-1.5 sm:px-2 lg:px-3 py-2 sm:py-3 text-sm sm:text-base bg-[#FFAE00] text-white rounded-[4px] hover:bg-white hover:text-[#FFAE00] hover:border hover:border-[#FFAE00]  duration-300 font-semibold">
                     Formu Gönder
                   </motion.button>
                 </div>

@@ -115,11 +115,9 @@ const Footer = () => {
             {/* Facebook */}
             <motion.a
               href="#"
-              className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-orange-500 hover:bg-orange-600 rounded-lg flex items-center justify-center transition-colors duration-200"
+              className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-[#FFAE00] hover:bg-orange-600 rounded-lg flex items-center justify-center transition-colors duration-200"
               aria-label="Facebook"
               variants={socialIconVariants}
-              whileHover={{ scale: 1.1, y: -2 }}
-              whileTap={{ scale: 0.95 }}
             >
               <FaFacebookF className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-black" />
             </motion.a>
@@ -127,11 +125,9 @@ const Footer = () => {
             {/* Instagram */}
             <motion.a
               href="#"
-              className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-orange-500 hover:bg-orange-600 rounded-lg flex items-center justify-center transition-colors duration-200"
+              className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-[#FFAE00]  rounded-lg flex items-center justify-center transition-colors duration-200"
               aria-label="Instagram"
               variants={socialIconVariants}
-              whileHover={{ scale: 1.1, y: -2 }}
-              whileTap={{ scale: 0.95 }}
             >
               <FaInstagram className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-black" />
             </motion.a>
@@ -139,11 +135,9 @@ const Footer = () => {
             {/* LinkedIn */}
             <motion.a
               href="#"
-              className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-orange-500 hover:bg-orange-600 rounded-lg flex items-center justify-center transition-colors duration-200"
+              className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-[#FFAE00]  rounded-lg flex items-center justify-center transition-colors duration-200"
               aria-label="LinkedIn"
               variants={socialIconVariants}
-              whileHover={{ scale: 1.1, y: -2 }}
-              whileTap={{ scale: 0.95 }}
             >
               <FaLinkedinIn className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-black" />
             </motion.a>

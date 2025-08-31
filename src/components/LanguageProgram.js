@@ -8,14 +8,14 @@ const LanguageProgram = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-left mb-8 sm:mb-12 lg:mb-20">
-          <h1 className="text-4xl font-normal text-gray-800 mb-4 sm:mb-6 leading-tight">
+          <h1 className="font-lato font-light text-4xl leading-none tracking-normal capitalize text-[#0E0E0E] mb-4 sm:mb-6">
             Senin İçin En Uygun İngilizce Veya Almanca,
             <br />
-            <span className="font-bold text-4xl">
+            <span className="font-lato font-semibold text-4xl leading-none tracking-normal capitalize text-[#0E0E0E]">
               Eğitim Programını Birlikte Belirleyelim
             </span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl leading-relaxed">
+          <p className="font-lato font-light text-xl leading-[30px] tracking-normal text-[#0E0E0E] max-w-4xl">
             Her öğrencinin dil öğrenme ihtiyacı ve süreci birbirinden farklıdır.
             Biz de bu yolculuğa sizi tanıyarak başlıyoruz. Amacımız sadece ders
             vermek değil; hedefinize en uygun, size özel bir öğrenme süreci
@@ -29,19 +29,19 @@ const LanguageProgram = () => {
           <div className="space-y-6 sm:space-y-8 order-2 lg:order-1">
             {/* First Block - HADİ TANIŞALIM! */}
             <div className="bg-white border border-[#FFFFC7] rounded-lg p-6 sm:p-8 shadow-sm">
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 uppercase tracking-wide text-left">
+              <h2 className="font-lato font-medium text-xl leading-[26px] tracking-normal text-[#0E0E0E] mb-4 sm:mb-6 text-left">
                 HADİ TANIŞALIM!
               </h2>
               <div className="space-y-2 sm:space-y-3 text-gray-700 leading-relaxed text-left">
-                <p className="text-xl">
+                <p className="font-lato font-light text-xl leading-none tracking-normal text-[#0E0E0E]">
                   Kurs ortamımızı birlikte gezelim, kahvemizi içerken seni biraz
                   daha tanıyalım.
                 </p>
-                <p className="text-xl">
+                <p className="font-lato font-light text-xl leading-none tracking-normal text-[#0E0E0E]">
                   Hangi dili neden öğrenmek istediğini öğrenelim, hedeflerini
                   dinleyelim.
                 </p>
-                <p className="text-xl">
+                <p className="font-lato font-light text-xl leading-none tracking-normal text-[#0E0E0E]">
                   Danışmanımız, bu görüşmede sana özel planlamanın temelini
                   atar.
                 </p>
@@ -50,18 +50,18 @@ const LanguageProgram = () => {
 
             {/* Second Block - DENEME DERSİNE KATIL */}
             <div className="bg-white border border-[#FFFFC7] rounded-lg p-6 sm:p-8 shadow-sm">
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 uppercase tracking-wide text-left">
+              <h2 className="font-lato font-medium text-xl leading-[26px] tracking-normal text-[#0E0E0E] mb-4 sm:mb-6 text-left">
                 DENEME DERSİNE KATIL
               </h2>
               <div className="space-y-2 sm:space-y-3 text-gray-700 leading-relaxed text-left">
-                <p className="text-sm sm:text-base">
+                <p className="font-lato font-light text-xl leading-none tracking-normal text-[#0E0E0E]">
                   Gerçek bir ders ortamında kendini deneyimle.
                 </p>
-                <p className="text-sm sm:text-base">
+                <p className="font-lato font-light text-xl leading-none tracking-normal text-[#0E0E0E]">
                   Eğitmenimiz seni sadece dinlemez; nasıl daha iyi öğrendiğini,
                   hangi yöntemle daha çok motive olduğunu da gözlemler.
                 </p>
-                <p className="text-sm sm:text-base">
+                <p className="font-lato font-light text-xl leading-none tracking-normal text-[#0E0E0E]">
                   Dilersen bu dersi birlikte değerlendiririz.
                 </p>
               </div>
@@ -85,18 +85,18 @@ const LanguageProgram = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
             {/* Left Side - Text and Button */}
             <div className="text-left">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 uppercase tracking-wide">
+              <h2 className="font-lato font-medium text-xl leading-[26px] tracking-normal text-[#0E0E0E] mb-4 sm:mb-6">
                 KİŞİSEL EĞİTİM PLANIN HAZIR !
               </h2>
               <div className="space-y-2 sm:space-y-3 text-gray-700 mb-6 sm:mb-8">
-                <p className="text-base sm:text-lg">
+                <p className="font-lato font-light text-xl leading-[26px] tracking-normal text-[#0E0E0E]">
                   Her şey sana özel ve esnek şekilde planlandı.
                 </p>
-                <p className="text-base sm:text-lg">
+                <p className="font-lato font-light text-xl leading-[26px] tracking-normal text-[#0E0E0E]">
                   Sen sadece öğrenmeye odaklan.
                 </p>
               </div>
-              <button className="w-full sm:w-auto bg-[#FFAE00] hover:bg-white hover:text-[#FFAE00] hover:border hover:border-[#FFAE00] text-white font-bold py-3 sm:py-4 px-3 sm:px-4 rounded-lg text-base sm:text-lg transition-all duration-300 shadow-lg">
+              <button className="w-full sm:w-auto bg-[#FFAE00] hover:bg-white hover:text-[#FFAE00] hover:border hover:border-[#FFAE00] text-white font-lato font-semibold py-3 sm:py-4 px-3 sm:px-4 rounded-[4px] text-sm leading-[20px] tracking-normal transition-all duration-300 shadow-lg">
                 Ücretsiz Tanışma Görüşmesi Planla
               </button>
             </div>

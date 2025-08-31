@@ -234,7 +234,7 @@ const ThreeCards = () => {
               </motion.div>
 
               <motion.button
-                className={`w-full ${card.buttonStyle} font-semibold py-2 sm:py-3 px-1.5 sm:px-2 rounded-lg text-sm font-lato leading-[20px] tracking-normal transition-all duration-100 mt-auto`}
+                className={`w-full ${card.buttonStyle} font-semibold py-2 sm:py-3 px-1.5 sm:px-2 rounded-[4px] text-sm font-lato leading-[20px] tracking-normal transition-all duration-100 mt-auto`}
               >
                 {card.buttonText}
               </motion.button>
