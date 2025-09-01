@@ -1,10 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import logoImage from "../assets/images/navbar/logo.jpg";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleLinkClick = (path) => {
+    // Scroll to top before navigating
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Small delay to ensure scroll animation starts
+    setTimeout(() => {
+      navigate(path);
+    }, 100);
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -48,7 +59,7 @@ const Footer = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
     >
-      <div className="max-w-7xl mx-auto px-1 sm:px-1 lg:px-2">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Üst Bölüm - Logo, İsim ve İletişim Bilgileri */}
         <div className="flex flex-col lg:flex-row justify-between items-start mb-4 sm:mb-6 lg:mb-8 space-y-4 sm:space-y-6 lg:space-y-0">
           {/* Sol Tarafta Logo ve İsim */}
@@ -149,28 +160,28 @@ const Footer = () => {
             variants={itemVariants}
           >
             <motion.div whileHover={{ y: -1 }} transition={{ duration: 0.2 }}>
-              <Link
-                to="/privacy-policy"
-                className="text-gray-500 hover:text-gray-700 underline underline-offset-4 transition-colors duration-200 text-center  sm:text-left font-light"
+              <button
+                onClick={() => handleLinkClick('/privacy-policy')}
+                className="text-gray-500 hover:text-gray-700 underline underline-offset-4 transition-colors duration-200 text-center  sm:text-left font-light bg-transparent border-none cursor-pointer"
               >
-                Privacy Policy
-              </Link>
+                Gizlilik Politikası
+              </button>
             </motion.div>
             <motion.div whileHover={{ y: -1 }} transition={{ duration: 0.2 }}>
-              <Link
-                to="/terms-of-service"
-                className="text-gray-500 hover:text-gray-700 underline underline-offset-4 transition-colors duration-200 text-center sm:text-left font-light"
+              <button
+                onClick={() => handleLinkClick('/terms-of-service')}
+                className="text-gray-500 hover:text-gray-700 underline underline-offset-4 transition-colors duration-200 text-center sm:text-left font-light bg-transparent border-none cursor-pointer"
               >
-                Terms of Services
-              </Link>
+                Kullanım Şartları
+              </button>
             </motion.div>
             <motion.div whileHover={{ y: -1 }} transition={{ duration: 0.2 }}>
-              <Link
-                to="/cookies-settings"
-                className="text-gray-500 hover:text-gray-700 underline underline-offset-4 transition-colors duration-200 text-center sm:text-left font-light"
+              <button
+                onClick={() => handleLinkClick('/cookies-settings')}
+                className="text-gray-500 hover:text-gray-700 underline underline-offset-4 transition-colors duration-200 text-center sm:text-left font-light bg-transparent border-none cursor-pointer"
               >
-                Cookies Settings
-              </Link>
+                Çerez Ayarları
+              </button>
             </motion.div>
           </motion.div>
         </div>

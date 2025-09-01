@@ -46,7 +46,7 @@ const NewSection = () => {
   };
 
   return (
-    <section className="py-8 sm:py-16 lg:py-24 bg-white">
+    <section id="about" className="py-8 sm:py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-left space-y-4 sm:space-y-6 lg:space-y-8">
           <h1 className="font-lato">
