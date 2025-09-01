@@ -100,8 +100,8 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="h-screen bg-white py-8 sm:py-12 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
+    <section className="bg-white py-6 sm:py-8 lg:py-12 xl:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-left mb-4 sm:mb-6 lg:mb-8"
           variants={headerVariants}
@@ -110,7 +110,7 @@ const Testimonials = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h2
-            className="text-4xl font-light text-[#0E0E0E] mb-2 sm:mb-3 font-lato leading-none tracking-normal capitalize"
+            className="text-2xl sm:text-3xl lg:text-4xl font-light text-[#0E0E0E] mb-2 sm:mb-3 font-lato leading-tight tracking-normal capitalize"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -119,7 +119,7 @@ const Testimonials = () => {
             Bizi Tercih Eden,
           </motion.h2>
           <motion.h2
-            className="text-4xl font-semibold text-[#0E0E0E] mb-4 sm:mb-6 font-lato leading-none tracking-normal capitalize"
+            className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0E0E0E] mb-3 sm:mb-4 lg:mb-6 font-lato leading-tight tracking-normal capitalize"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -128,7 +128,7 @@ const Testimonials = () => {
             Öğrencilerimizin Gözünden
           </motion.h2>
           <motion.p
-            className="text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-[30px] tracking-normal px-2"
+            className="text-sm sm:text-base lg:text-lg xl:text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-relaxed tracking-normal"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -141,7 +141,7 @@ const Testimonials = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 xl:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -149,12 +149,12 @@ const Testimonials = () => {
         >
           {/* Google Reviews Summary */}
           <motion.div
-            className="bg-[#FEFDF9] rounded-lg shadow-sm border border-[#FFFFC7] p-4 sm:p-6 lg:p-8 text-center"
+            className="bg-[#FEFDF9] rounded-lg shadow-sm border border-[#FFFFC7] p-3 sm:p-4 lg:p-6 xl:p-8 text-center"
             variants={itemVariants}
           >
-            <motion.div className="mb-4 sm:mb-6">
+            <motion.div className="mb-3 sm:mb-4 lg:mb-6">
               <svg
-                className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mx-auto"
+                className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20 mx-auto"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -175,16 +175,16 @@ const Testimonials = () => {
                 />
               </svg>
             </motion.div>
-            <h3 className="text-xl font-normal text-[#0E0E0E] mb-3 sm:mb-4 font-lato leading-none tracking-normal text-center">
+            <h3 className="text-lg sm:text-xl font-normal text-[#0E0E0E] mb-2 sm:mb-3 lg:mb-4 font-lato leading-tight tracking-normal text-center">
               Web'deki Yorumlar
             </h3>
-            <div className="flex justify-center items-center mb-3 sm:mb-4">
-              <span className="text-3xl font-normal text-gray-900 mr-2 sm:mr-3 font-lato leading-[32px] tracking-normal">
+            <div className="flex justify-center items-center mb-2 sm:mb-3 lg:mb-4">
+              <span className="text-2xl sm:text-3xl font-normal text-gray-900 mr-2 sm:mr-3 font-lato leading-tight tracking-normal">
                 5,0
               </span>
               <div className="flex">{renderStars(5)}</div>
             </div>
-            <p className="text-base font-light text-[#0E0E0E] mb-4 sm:mb-6 font-lato leading-none tracking-normal text-center">
+            <p className="text-sm sm:text-base font-light text-[#0E0E0E] mb-3 sm:mb-4 lg:mb-6 font-lato leading-tight tracking-normal text-center">
               58 yorum
             </p>
             <div className="space-y-2 sm:space-y-3">

@@ -75,7 +75,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-8 sm:py-12 lg:py-20 bg-[#FEFDF9]">
+    <section className="py-6 sm:py-8 lg:py-12 xl:py-16 bg-[#FEFDF9]">
       <style jsx>{`
         @keyframes slideDown {
           from {
@@ -92,22 +92,22 @@ const FAQ = () => {
       `}</style>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="text-left mb-8 sm:mb-12 lg:mb-16"
+          className="text-left mb-6 sm:mb-8 lg:mb-12 xl:mb-16"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-semibold text-gray-900 mb-6 font-lato leading-none tracking-normal capitalize">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 mb-3 sm:mb-4 lg:mb-6 font-lato leading-tight tracking-normal capitalize">
             Merak Ettiklerinizi Cevaplıyoruz
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl font-lato font-light leading-[30px] tracking-normal">
+          <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-600 max-w-4xl font-lato font-light leading-relaxed tracking-normal">
             Dil yolculuklarına bizimle baslayan ogrenciler, deneyimlerini samimi
             bir sekilde paylastı. Sen de karar vermeden once onların hikayesine
             goz at
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 items-start">
           {faqData.map((item, index) => (
             <motion.div
               key={item.id}
@@ -118,22 +118,22 @@ const FAQ = () => {
             >
               <button
                 onClick={() => toggleItem(item.id)}
-                className="w-full px-3 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                className="w-full px-3 py-3 sm:py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
               >
-                <span className="font-medium text-gray-900 text-xl font-lato leading-[26px] tracking-normal text-left">
+                <span className="font-medium text-gray-900 text-sm sm:text-base lg:text-lg xl:text-xl font-lato leading-tight tracking-normal text-left">
                   {item.question}
                 </span>
                 <div
-                  className={`w-6 h-6 rounded-full border-2 border-[#FFAE00] flex items-center justify-center transition-all duration-200`}
+                  className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-[#FFAE00] flex items-center justify-center transition-all duration-200 flex-shrink-0`}
                 >
                   {openItems[item.id] ? (
                     // Eksi ikonu (açık durum)
-                    <div className="w-3 h-0.5 bg-[#FFAE00]"></div>
+                    <div className="w-2.5 sm:w-3 h-0.5 bg-[#FFAE00]"></div>
                   ) : (
                     // Artı ikonu (kapalı durum)
                     <>
-                      <div className="w-3 h-0.5 bg-[#FFAE00] absolute"></div>
-                      <div className="w-0.5 h-3 bg-[#FFAE00] absolute"></div>
+                      <div className="w-2.5 sm:w-3 h-0.5 bg-[#FFAE00] absolute"></div>
+                      <div className="w-0.5 h-2.5 sm:h-3 bg-[#FFAE00] absolute"></div>
                     </>
                   )}
                 </div>
@@ -141,12 +141,12 @@ const FAQ = () => {
 
               {openItems[item.id] && (
                 <div
-                  className="px-3 pb-4 overflow-hidden transition-all duration-300 ease-in-out"
+                  className="px-3 pb-3 sm:pb-4 overflow-hidden transition-all duration-300 ease-in-out"
                   style={{
                     animation: "slideDown 0.3s ease-out forwards",
                   }}
                 >
-                  <p className="text-gray-600 text-sm font-lato font-light leading-none tracking-normal text-left">
+                  <p className="text-gray-600 text-xs sm:text-sm font-lato font-light leading-relaxed tracking-normal text-left">
                     {item.answer}
                   </p>
                 </div>

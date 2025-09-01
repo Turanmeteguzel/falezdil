@@ -50,18 +50,18 @@ const VideoSection = () => {
   };
 
   return (
-    <section className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-[#FEFDF9]">
+    <section className="py-6 sm:py-8 lg:py-12 xl:py-16 bg-[#FEFDF9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <motion.div
-          className="text-left mb-8 sm:mb-12 lg:mb-16 xl:mb-20"
+          className="text-left mb-6 sm:mb-8 lg:mb-12 xl:mb-16"
           variants={headerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h1
-            className="text-4xl font-light text-gray-800 mb-3 sm:mb-4 lg:mb-6 font-lato leading-none tracking-normal capitalize"
+            className="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-800 mb-2 sm:mb-3 lg:mb-4 font-lato leading-tight tracking-normal capitalize"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -69,12 +69,12 @@ const VideoSection = () => {
           >
             Bir Dersten Fazlası:
             <br className="hidden sm:block" />
-            <span className="text-4xl font-semibold text-[#0E0E0E] font-lato leading-none tracking-normal capitalize">
+            <span className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0E0E0E] font-lato leading-tight tracking-normal capitalize">
               Öğrenmenin Yeni Hali
             </span>
           </motion.h1>
           <motion.p
-            className="text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-[30px] tracking-normal"
+            className="text-sm sm:text-base lg:text-lg xl:text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-relaxed tracking-normal"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}

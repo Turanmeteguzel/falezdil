@@ -27,7 +27,7 @@ function App() {
             element={
               <>
                 <Navbar />
-                <div className="pt-20">
+                <div className="pt-10">
                   <Hero />
                 </div>
                 <NewSection />
