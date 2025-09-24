@@ -39,12 +39,15 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-[90vh] flex items-center bg-[#FEFDF9] -mt-5 pt-12">
+    <section
+      id="home"
+      className="min-h-[90vh] flex items-center bg-[#FEFDF9] pt-24 sm:pt-28 lg:pt-32 pb-10 sm:pb-12 lg:pb-16 xl:pb-20"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* Sol taraf - Yazı içeriği */}
           <motion.div
-            className="space-y-3 sm:space-y-4 lg:space-y-6 xl:space-y-8 text-left order-1 lg:order-1"
+            className="space-y-3 sm:space-y-4 lg:space-y-6 xl:space-y-8 text-left order-1 lg:order-1 "
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -54,17 +57,17 @@ const Hero = () => {
               variants={itemVariants}
             >
               <motion.h1
-                className="font-lato text-left"
+                className="font-lato text-left mb-5"
                 variants={itemVariants}
               >
                 <motion.span
-                  className="block font-light text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight sm:leading-[1.2] lg:leading-[1.2] mt-2 sm:mt-3 font-lato"
+                  className="block font-light text-2xl sm:text-3xl lg:text-4xl leading-tight mt-2 sm:mt-3 font-lato"
                   variants={itemVariants}
                 >
                   Antalya'nın Eşsiz Manzarasında
                 </motion.span>
                 <motion.span
-                  className="block font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight sm:leading-[1.2] lg:leading-[1.2] mt-2 sm:mt-3 font-lato"
+                  className="block font-bold text-2xl sm:text-3xl lg:text-4xl leading-tight mt-2 sm:mt-3 font-lato"
                   variants={itemVariants}
                 >
                   İngilizceye Açılan Kapınız!
@@ -76,7 +79,7 @@ const Hero = () => {
                 variants={itemVariants}
               >
                 <motion.p
-                  className="text-xs sm:text-sm md:text-base lg:text-lg mb-6 xl:text-xl text-[#0E0E0E] leading-relaxed font-light font-lato text-left"
+                  className="text-md sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 xl:text-xl text-[#0E0E0E] leading-relaxed font-light font-lato text-left"
                   variants={itemVariants}
                 >
                   Bizce İngilizce sadece bir ders değil, hayatın içine
@@ -84,21 +87,21 @@ const Hero = () => {
                 </motion.p>
 
                 <motion.p
-                  className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#0E0E0E] leading-relaxed font-light font-lato text-left"
+                  className="text-md sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#0E0E0E] leading-relaxed font-light font-lato text-left"
                   variants={itemVariants}
                 >
                   Antalya'da konuşma odaklı İngilizce eğitimi hiç bu kadar
                   keyifli ve etkili olmamıştı!
                 </motion.p>
                 <motion.p
-                  className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#0E0E0E] leading-relaxed font-light font-lato text-left"
+                  className="text-md sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#0E0E0E] leading-relaxed font-light font-lato text-left"
                   variants={itemVariants}
                 >
                   Butik sınıflarda, profesyonel eğitmenlerle kendi hızında
                   öğren, gerçek hayatta kullanabileceğin şekilde pratik yap.
                 </motion.p>
                 <motion.p
-                  className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#0E0E0E] leading-relaxed font-light font-lato text-left"
+                  className="text-md sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#0E0E0E] leading-relaxed font-light font-lato text-left"
                   variants={itemVariants}
                 >
                   Antalya Falez Dil Kursu olarak; ister özel ders, ister küçük
@@ -109,12 +112,18 @@ const Hero = () => {
             </motion.div>
 
             <motion.div
-              className="pt-2 sm:pt-3 lg:pt-4"
+              className="pt-2 sm:pt-3 lg:pt-4 mt-4 sm:mt-0"
               variants={itemVariants}
             >
               <motion.button
-                className="w-full sm:w-auto px-3 sm:px-4 lg:px-6 py-2 sm:py-3 lg:py-4 bg-[#FFAE00] text-white font-semibold rounded-[4px] transition-all duration-300 text-xs sm:text-sm lg:text-md hover:bg-white hover:text-[#FFAE00] hover:border hover:border-[#FFAE00] font-lato"
+                className="w-auto px-8 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 mt-3 bg-[#FFAE00] text-white font-normal rounded-[4px] border border-[#FFAE00] transition-all duration-300 text-xs sm:text-sm lg:text-md hover:bg-white hover:text-[#FFAE00] font-lato"
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 Deneme Dersi Oluştur
               </motion.button>

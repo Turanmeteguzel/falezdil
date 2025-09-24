@@ -15,10 +15,24 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsOfService from "./components/TermsOfService";
 import CookiesSettings from "./components/CookiesSettings";
 import ScrollToTop from "./components/ScrollToTop";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
+import logo from "./assets/images/navbar/falezz.jpg";
 
 function App() {
   return (
     <Router>
+      <FloatingWhatsApp
+        accountName="Antalya Falez Dil Kursu"
+        phoneNumber="+905526719607"
+        statusMessage="Çevrimiçi"
+        avatar={logo}
+        chatMessage="Merhaba, İyi Günler.             Size Nasıl Yardımcı Olabiliriz?"
+        notification={true}
+        notificationDelay={15}
+        notificationLoop={3}
+        notificationSound={true}
+        buttonClassName="whatsapp-btn"
+      />
       <ScrollToTop />
       <div className="App">
         <Routes>
@@ -27,9 +41,7 @@ function App() {
             element={
               <>
                 <Navbar />
-                <div className="pt-10">
-                  <Hero />
-                </div>
+                <Hero />
                 <NewSection />
                 <LanguageProgram />
                 <ThreeCards />

@@ -11,13 +11,13 @@ const ThreeCards = () => {
       description:
         "Zamanı sınırlı, birebir odaklanmak isteyen; sınav, iş, göç gibi hedefleri olanlar için.",
       items: [
-        "Öğrenciye özel haftalık ders programı",
-        "Eğitime istediğin zaman başlama seçeneği",
-        "Telafi dersi seçeneği (24 saat öncesine kadar)",
-        "Hedeflere uygun birebir içerik (sınav, iş, akademik)",
-        "TOEFL, IELTS, Goethe, telc gibi sınavlar için özel içerik",
-        "Hedef odaklı öğrenme, oyunlar, sunumlar, kelime desteği",
-        "Bireysel gelişim takibi ve haftalık geri bildirim raporu",
+        "Öğrenciye özel haftalık ders programı.",
+        "Eğitime istediğin zaman başlama seçeneği.",
+        "Telafi dersi seçeneği (24 saat öncesine kadar).",
+        "Hedeflere uygun birebir içerik (sınav, iş, akademik).",
+        "TOEFL, IELTS, Goethe, telc gibi sınavlar için özel içerik.",
+        "Hedef odaklı öğrenme, oyunlar, sunumlar, kelime desteği.",
+        "Bireysel gelişim takibi ve haftalık geri bildirim raporu.",
       ],
       buttonText: "Ücretsiz Tanışma Görüşmesi Planla",
       buttonStyle:
@@ -30,14 +30,14 @@ const ThreeCards = () => {
       description:
         "Hem konuşmak hem de küçük, dengeli sınıfta bireysel ilgi almak isteyenler için.",
       items: [
-        "Maks. 4 kişilik sınıflar",
-        "Öğrenciye özel haftalık ders programı",
-        "Eğitime istediğin zaman başlama seçeneği",
-        "Telafi dersi seçeneği (24 saat öncesine kadar)",
-        " Sinif eslestirmesi: Ayni seviye, benzer yas ve benzer ogrenme stiline sahip ogrenciler bir araya getirilir",
-        "Ortak hedeflere gore sinif arkadasi sistemi (sinav, is, akademik)",
-        "Egitmen gozlemi ve kisisel geri bildirim",
-        "Derslerde konusma odakli aktiviteler, sunumlar, oyunlar",
+        "Maks. 4 kişilik sınıflar.",
+        "Öğrenciye özel haftalık ders programı.",
+        "Eğitime istediğin zaman başlama seçeneği.",
+        "Telafi dersi seçeneği (24 saat öncesine kadar).",
+        "<strong>Sınıf eşleştirmesi:</strong> Aynı seviye, benzer yaş ve benzer öğrenme stiline sahip öğrenciler bir araya getirilir.",
+        "Ortak hedeflere göre sınıf arkadaşı sistemi (sınav, iş, akademik).",
+        "Eğitmen gözlemi ve kişisel geri bildirim.",
+        "Derslerde konuşma odaklı aktiviteler, sunumlar, oyunlar.",
       ],
       buttonText: "Ücretsiz Tanışma Görüşmesi Planla",
       buttonStyle:
@@ -51,13 +51,13 @@ const ThreeCards = () => {
       description:
         "Sosyalleşerek öğrenmeyi seven ve birlikte çalışırken motive olan öğrenciler için.",
       items: [
-        "Min. 5 - maks. 10 kişilik aktif sınıf yapısı",
-        "3.5 aylık yapılandırılmış sabit eğitim programı",
-        "Belirtilen tarihlerde derslere başlama seçeneği",
-        "%80 ders katılımında sonunda sertifika",
-        "Sinif eslestirmesi: Yas grubu ve seviyeye gore planlanir",
-        "Dinamik sinif ortami + konusma guveni kazandiran icerik",
-        "Sinif ici mini sunumlar, projeler, konusma oyunlari",
+        "Min. 5 - maks. 10 kişilik aktif sınıf yapısı.",
+        "3.5 aylık yapılandırılmış sabit eğitim programı.",
+        "Belirtilen tarihlerde derslere başlama seçeneği.",
+        "%80 ders katılımında sonunda sertifika.",
+        "<strong>Sınıf eşleştirmesi:</strong> Yaş grubu ve seviyeye göre planlanır.",
+        "Dinamik sınıf ortamı + konuşma güveni kazandıran içerik.",
+        "Sınıf içi mini sunumlar, projeler, konuşma oyunları.",
       ],
       buttonText: "Ücretsiz Tanışma Görüşmesi Planla",
       buttonStyle:
@@ -113,7 +113,7 @@ const ThreeCards = () => {
   };
 
   return (
-    <div className="py-6 sm:py-8 lg:py-12 xl:py-16 bg-white">
+    <div className="py-10 sm:py-12 lg:py-16 xl:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <motion.div
@@ -124,31 +124,32 @@ const ThreeCards = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h1
-            className="text-2xl sm:text-3xl lg:text-4xl font-light text-[#0E0E0E] mb-2 sm:mb-3 lg:mb-4 font-lato leading-tight tracking-normal capitalize"
+            className="text-2xl sm:text-3xl lg:text-4xl font-light text-[#0E0E0E] mb-4 sm:mb-6 lg:mb-8 font-lato leading-tight tracking-normal capitalize"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
             Hedefi olanlar için,
-            <br className="hidden sm:block" />
+            <br className="block" />
             <span className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0E0E0E] font-lato leading-tight tracking-normal capitalize">
-              Tek Yöntem Değil, Doğru Yöntem Lazım
+              Tek Yöntem Değil, Doğru <br className="block sm:hidden" /> Yöntem
+              Lazım
             </span>
           </motion.h1>
           <div className="flex flex-col gap-1 sm:gap-2">
-            <span className="text-sm sm:text-base lg:text-lg xl:text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-relaxed tracking-normal">
+            <span className="text-md sm:text-base lg:text-lg xl:text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-relaxed tracking-normal">
               Dil öğrenimi tek bir modelle herkese uyan bir süreç değildir.
             </span>{" "}
-            <span className="text-sm sm:text-base lg:text-lg xl:text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-relaxed tracking-normal">
+            <span className="text-md sm:text-base lg:text-lg xl:text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-relaxed tracking-normal">
               Bazı öğrenciler birebir ilgiyle hızla ilerlerken, kimileri küçük
               gruplarda etkileşimle gelişir.
             </span>{" "}
-            <span className="text-sm sm:text-base lg:text-lg xl:text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-relaxed tracking-normal">
+            <span className="text-md sm:text-base lg:text-lg xl:text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-relaxed tracking-normal">
               Kimi öğrenciler ise motivasyonu yüksek, sosyal sınıflarda daha çok
               keyif alır.
             </span>{" "}
-            <span className="text-sm sm:text-base lg:text-lg xl:text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-relaxed tracking-normal">
+            <span className="text-md sm:text-sm md:text-base lg:text-lg mb-6 xl:text-xl text-[#0E0E0E] leading-relaxed font-light font-lato text-left">
               İşte bu yüzden Antalya Falez Dil Kursu'nda farklı hedeflere,
               farklı tempolara ve farklı öğrenme stillerine göre 3 ayrı eğitim
               modeli sunuyoruz:
@@ -168,7 +169,7 @@ const ThreeCards = () => {
             <motion.div
               key={card.id}
               className={`w-full min-h-[450px] sm:min-h-[500px] lg:min-h-[550px] xl:min-h-[600px] bg-white border border-[#CFCFCF] rounded-lg p-3 sm:p-4 lg:p-6 xl:p-8 flex flex-col relative ${
-                card.badge ? 'pt-8 sm:pt-10 lg:pt-12 xl:pt-14' : ''
+                card.badge ? "pt-8 sm:pt-10 lg:pt-12 xl:pt-14" : ""
               }`}
               style={{ boxShadow: "4px 4px 2px 0px #FFAE0026" }}
               variants={cardVariants}
@@ -184,7 +185,9 @@ const ThreeCards = () => {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  <span className="text-xs sm:text-sm text-[#FFAE00] font-semibold">{card.badge}</span>
+                  <span className="text-xs sm:text-sm text-[#FFAE00] font-semibold">
+                    {card.badge}
+                  </span>
                 </motion.div>
               )}
 
@@ -195,10 +198,10 @@ const ThreeCards = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <p className="text-lg sm:text-xl lg:text-2xl text-[#0E0E0E] mb-1 text-left font-lato font-light leading-tight tracking-normal">
+                <p className="text-md sm:text-lg lg:text-xl text-[#0E0E0E] mb-1 text-left font-lato font-light leading-tight tracking-normal whitespace-nowrap">
                   {card.subtitle}
                 </p>
-                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#0E0E0E] mb-1 sm:mb-2 text-left font-lato leading-tight tracking-normal">
+                <h2 className="text-md sm:text-lg lg:text-2xl font-bold text-[#0E0E0E] mb-1 sm:mb-2 text-left font-lato leading-tight tracking-normal">
                   {card.title}
                 </h2>
                 <p className="text-xs sm:text-sm text-[#0E0E0E] text-left font-lato font-light leading-relaxed tracking-normal">
@@ -228,15 +231,22 @@ const ThreeCards = () => {
                       whileHover={{ scale: 1.2 }}
                       transition={{ duration: 0.2 }}
                     />
-                    <span className="text-xs sm:text-sm text-[#0E0E0E] text-left font-lato font-light leading-relaxed tracking-normal">
-                      {item}
-                    </span>
+                    <span
+                      className="text-xs sm:text-sm text-[#0E0E0E] text-left font-lato font-light leading-relaxed tracking-normal"
+                      dangerouslySetInnerHTML={{ __html: item }}
+                    />
                   </motion.div>
                 ))}
               </motion.div>
 
               <motion.button
                 className={`w-full ${card.buttonStyle} font-semibold py-2 sm:py-3 px-2 sm:px-3 rounded-[4px] text-xs sm:text-sm font-lato leading-tight tracking-normal transition-all duration-100 mt-auto`}
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 {card.buttonText}
               </motion.button>

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import logoImage from "../assets/images/navbar/logo.jpg";
 
@@ -9,7 +9,7 @@ const Footer = () => {
 
   const handleLinkClick = (path) => {
     // Scroll to top before navigating
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
     // Small delay to ensure scroll animation starts
     setTimeout(() => {
       navigate(path);
@@ -53,15 +53,15 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="bg-white py-6 sm:py-8 lg:py-10 xl:py-12"
+      className="py-10 sm:py-12 lg:py-16 xl:py-20 mx-4 sm:mx-4 lg:mx-6 xl:mx-8 my-0"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-6 xl:px-8">
         {/* Üst Bölüm - Logo, İsim ve İletişim Bilgileri */}
-        <div className="flex flex-col lg:flex-row justify-between items-start mb-4 sm:mb-6 lg:mb-8 space-y-4 sm:space-y-6 lg:space-y-0">
+        <div className="flex flex-col lg:flex-row justify-between items-start mb-4 sm:mb-4 lg:mb-6 space-y-4 sm:space-y-4 lg:space-y-0">
           {/* Sol Tarafta Logo ve İsim */}
           <motion.div className="mb-4 lg:mb-0" variants={itemVariants}>
             <div className="flex items-center mb-2 sm:mb-3">
@@ -98,26 +98,18 @@ const Footer = () => {
 
         {/* Ayırıcı Çizgi */}
         <motion.div
-          className="border-t border-gray-200 mb-4 sm:mb-6 lg:mb-8"
+          className="border-t border-gray-200 mb-4 sm:mb-4 lg:mb-6 pb-6 sm:pb-6 lg:pb-8"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         ></motion.div>
 
-        {/* Alt Bölüm - Telif Hakkı, Sosyal Medya ve Yasal Bağlantılar */}
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-3 sm:space-y-4 md:space-y-0">
-          {/* Sol Bölüm - Telif Hakkı */}
+        {/* Alt Bölüm - Sol Telif, Orta Sosyal, Sağ Yasal Bağlantılar */}
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-y-8 sm:gap-y-10 md:gap-y-0 mb-4 sm:mb-4">
+          {/* Orta Bölüm - Sosyal Medya Simgeleri (mobilde üstte, soldan) */}
           <motion.div
-            className="text-gray-500 text-xs sm:text-sm lg:text-base text-center md:text-left font-light"
-            variants={itemVariants}
-          >
-            © 2025 Antalya Falez Dil Kursu. Tüm hakları saklıdır.
-          </motion.div>
-
-          {/* Orta Bölüm - Sosyal Medya Simgeleri */}
-          <motion.div
-            className="flex space-x-2 sm:space-x-3"
+            className="order-1 md:order-2 flex justify-start md:justify-center space-x-2 sm:space-x-3"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -125,8 +117,9 @@ const Footer = () => {
           >
             {/* Facebook */}
             <motion.a
-              href="#"
-              className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-[#FFAE00] hover:bg-orange-600 rounded-lg flex items-center justify-center transition-colors duration-200"
+              href="https://www.facebook.com/p/Antalya-Falez-Dil-Yabancı-Dil-Kursu-100076057603873/?_rdr"
+              target="_blank"
+              className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-[#FFAE00] rounded-[4px] flex items-center justify-center transition-colors duration-200"
               aria-label="Facebook"
               variants={socialIconVariants}
             >
@@ -135,8 +128,9 @@ const Footer = () => {
 
             {/* Instagram */}
             <motion.a
-              href="#"
-              className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-[#FFAE00]  rounded-lg flex items-center justify-center transition-colors duration-200"
+              href="https://www.instagram.com/antalyafalezdil"
+              target="_blank"
+              className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-[#FFAE00] rounded-[4px] flex items-center justify-center transition-colors duration-200"
               aria-label="Instagram"
               variants={socialIconVariants}
             >
@@ -145,8 +139,9 @@ const Footer = () => {
 
             {/* LinkedIn */}
             <motion.a
-              href="#"
-              className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-[#FFAE00]  rounded-lg flex items-center justify-center transition-colors duration-200"
+              href="https://www.linkedin.com/company/özel-antalya-falez-dil-kursu"
+              target="_blank"
+              className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-[#FFAE00] rounded-[4px] flex items-center justify-center transition-colors duration-200"
               aria-label="LinkedIn"
               variants={socialIconVariants}
             >
@@ -156,33 +151,54 @@ const Footer = () => {
 
           {/* Sağ Bölüm - Yasal Bağlantılar */}
           <motion.div
-            className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3 lg:space-x-4 xl:space-x-6 text-xs sm:text-sm lg:text-base"
+            className="order-2 md:order-3 flex flex-row justify-start md:justify-end space-x-4 sm:space-x-4 lg:space-x-6 text-xs sm:text-sm lg:text-base"
             variants={itemVariants}
           >
-            <motion.div whileHover={{ y: -1 }} transition={{ duration: 0.2 }}>
+            <motion.div
+              whileHover={{ y: -1 }}
+              transition={{ duration: 0.2 }}
+              className="px-2 sm:px-0"
+            >
               <button
-                onClick={() => handleLinkClick('/privacy-policy')}
-                className="text-gray-500 hover:text-gray-700 underline underline-offset-4 transition-colors duration-200 text-center  sm:text-left font-light bg-transparent border-none cursor-pointer"
+                onClick={() => handleLinkClick("/privacy-policy")}
+                className="text-gray-500 hover:text-gray-700 underline underline-offset-4 transition-colors duration-200 text-center font-light bg-transparent border-none cursor-pointer"
               >
-                Gizlilik Politikası
+                Privacy Policy
               </button>
             </motion.div>
-            <motion.div whileHover={{ y: -1 }} transition={{ duration: 0.2 }}>
+            <motion.div
+              whileHover={{ y: -1 }}
+              transition={{ duration: 0.2 }}
+              className="px-2 sm:px-0"
+            >
               <button
-                onClick={() => handleLinkClick('/terms-of-service')}
-                className="text-gray-500 hover:text-gray-700 underline underline-offset-4 transition-colors duration-200 text-center sm:text-left font-light bg-transparent border-none cursor-pointer"
+                onClick={() => handleLinkClick("/terms-of-service")}
+                className="text-gray-500 hover:text-gray-700 underline underline-offset-4 transition-colors duration-200 text-center font-light bg-transparent border-none cursor-pointer"
               >
-                Kullanım Şartları
+                Terms of Services
               </button>
             </motion.div>
-            <motion.div whileHover={{ y: -1 }} transition={{ duration: 0.2 }}>
+            <motion.div
+              whileHover={{ y: -1 }}
+              transition={{ duration: 0.2 }}
+              className="px-2 sm:px-0"
+            >
               <button
-                onClick={() => handleLinkClick('/cookies-settings')}
-                className="text-gray-500 hover:text-gray-700 underline underline-offset-4 transition-colors duration-200 text-center sm:text-left font-light bg-transparent border-none cursor-pointer"
+                onClick={() => handleLinkClick("/cookies-settings")}
+                className="text-gray-500 hover:text-gray-700 underline underline-offset-4 transition-colors duration-200 text-center font-light bg-transparent border-none cursor-pointer"
               >
-                Çerez Ayarları
+                Cookies Settings
               </button>
             </motion.div>
+          </motion.div>
+
+          {/* Sol Bölüm - Telif Hakkı (mobilde en altta, soldan) */}
+          <motion.div
+            className="order-3 md:order-1 text-gray-500 text-xs sm:text-sm lg:text-base text-left font-light"
+            variants={itemVariants}
+          >
+            © {new Date().getFullYear()} Antalya Falez Dil Kursu. Tüm hakları
+            saklıdır.
           </motion.div>
         </div>
       </div>

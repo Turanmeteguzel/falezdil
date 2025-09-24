@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Falezdil - Yeni İletişim Formu</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+      .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        text-align: center;
+        border-bottom: 3px solid #ffae00;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+      }
+      .header h1 {
+        color: #ffae00;
+        margin: 0;
+        font-size: 28px;
+      }
+      .header p {
+        color: #666;
+        margin: 10px 0 0 0;
+        font-size: 16px;
+      }
+      .form-data {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+      .field {
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: white;
+        border-left: 4px solid #ffae00;
+        border-radius: 4px;
+      }
+      .field-label {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+      .field-value {
+        color: #555;
+        font-size: 16px;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        color: #666;
+        font-size: 14px;
+      }
+      .highlight {
+        background-color: #fff3cd;
+        border: 1px solid #ffeaa7;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🎓 Falezdil</h1>
+        <p>Yeni İletişim Formu Mesajı</p>
+      </div>
+
+      <div class="highlight">
+        <strong>📧 Yeni bir öğrenci adayı iletişim formu doldurdu!</strong>
+      </div>
+
+      <div class="form-data">
+        <h3 style="color: #ffae00; margin-top: 0">👤 Kişisel Bilgiler</h3>
+
+        <div class="field">
+          <div class="field-label">Ad Soyad:</div>
+          <div class="field-value">{{from_name}}</div>
+        </div>
+
+        <div class="field">
+          <div class="field-label">E-posta Adresi:</div>
+          <div class="field-value">{{from_email}}</div>
+        </div>
+
+        <div class="field">
+          <div class="field-label">Telefon Numarası:</div>
+          <div class="field-value">{{phone}}</div>
+        </div>
+      </div>
+
+      <div class="form-data">
+        <h3 style="color: #ffae00; margin-top: 0">📚 Eğitim Tercihleri</h3>
+
+        <div class="field">
+          <div class="field-label">Öğrenmek İstediği Dil:</div>
+          <div class="field-value">{{language}}</div>
+        </div>
+
+        <div class="field">
+          <div class="field-label">Mevcut Seviye:</div>
+          <div class="field-value">{{level}}</div>
+        </div>
+
+        <div class="field">
+          <div class="field-label">Haftalık Ders Saati:</div>
+          <div class="field-value">{{hours}}</div>
+        </div>
+      </div>
+
+      <div class="form-data">
+        <h3 style="color: #ffae00; margin-top: 0">💬 Ek Bilgiler</h3>
+
+        <div class="field">
+          <div class="field-label">Mesaj:</div>
+          <div class="field-value">{{message}}</div>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <strong>⚡ Hızlı İşlem:</strong><br />
+        Bu öğrenci adayına en kısa sürede dönüş yapın ve uygun program
+        önerisinde bulunun.
+      </div>
+
+      <div class="footer">
+        <p>
+          Bu e-posta Falezdil web sitesi iletişim formu aracılığıyla
+          gönderilmiştir.
+        </p>
+        <p><strong>Gönderen:</strong> {{from_name}} ({{from_email}})</p>
+        <p><strong>Gönderim Tarihi:</strong> {{current_date}}</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -5,7 +5,7 @@ import logo from "../assets/images/navbar/logo.jpg";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -15,11 +15,11 @@ const Navbar = () => {
 
   const handleLogoClick = () => {
     // If we're on a different page (not home), navigate to home
-    if (location.pathname !== '/') {
-      navigate('/');
+    if (location.pathname !== "/") {
+      navigate("/");
     } else {
       // If we're already on home page, scroll to top
-      scrollToSection('home');
+      scrollToSection("home");
     }
   };
 
@@ -28,12 +28,12 @@ const Navbar = () => {
     if (element) {
       const navbarHeight = 80; // Approximate navbar height
       const elementPosition = element.offsetTop - navbarHeight;
-      
+
       window.scrollTo({
         top: elementPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
-      
+
       setActiveSection(sectionId);
     }
   };
@@ -41,15 +41,15 @@ const Navbar = () => {
   // Update active section based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'blog'];
+      const sections = ["home", "about", "blog"];
       const navbarHeight = 80;
-      
+
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
         if (section) {
           const sectionTop = section.offsetTop - navbarHeight - 100; // 100px offset for better detection
           const sectionBottom = sectionTop + section.offsetHeight;
-          
+
           if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
             setActiveSection(sections[i]);
             break;
@@ -58,8 +58,8 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const logoVariants = {
@@ -104,11 +104,6 @@ const Navbar = () => {
             <motion.button
               onClick={handleLogoClick}
               className="bg-transparent border-none cursor-pointer p-0"
-              variants={logoVariants}
-              initial="hidden"
-              animate="visible"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
             >
               <img
                 src={logo}
@@ -118,55 +113,43 @@ const Navbar = () => {
             </motion.button>
 
             {/* Desktop Menu - Hidden on mobile, visible on lg and above */}
-            <div className="hidden lg:flex items-baseline space-x-6 lg:space-x-8">
+            <div className="hidden lg:flex items-center space-x-6 lg:space-x-8">
               <motion.a
-                onClick={() => scrollToSection('home')}
-                className={`hover:text-orange-500 px-2 sm:px-3 py-2 text-sm lg:text-base font-medium transition-colors duration-300 cursor-pointer relative ${
-                  activeSection === 'home' ? 'text-orange-500' : ''
+                onClick={() => scrollToSection("home")}
+                className={`inline-block px-2 sm:px-3 py-2 text-sm lg:text-base font-medium text-[#0E0E0E] transition-colors duration-300 cursor-pointer relative ${
+                  activeSection === "home"
+                    ? "border-b-2 border-[#FFAE00]"
+                    : "border-b-2 border-transparent"
                 }`}
-                style={{
-                  borderBottom: activeSection === 'home' ? "1.84px solid #FFAE00" : "none",
-                  color: activeSection === 'home' ? "#FFAE00" : "#0E0E0E",
-                }}
                 variants={menuItemVariants}
                 initial="hidden"
                 animate="visible"
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.3 }}
               >
                 Anasayfa
               </motion.a>
               <motion.a
-                onClick={() => scrollToSection('about')}
-                className={`hover:text-orange-500 px-2 sm:px-3 py-2 text-sm lg:text-base font-medium transition-colors duration-300 cursor-pointer relative ${
-                  activeSection === 'about' ? 'text-orange-500' : ''
+                onClick={() => scrollToSection("about")}
+                className={`inline-block px-2 sm:px-3 py-2 text-sm lg:text-base font-medium text-[#0E0E0E] transition-colors duration-300 cursor-pointer relative ${
+                  activeSection === "about"
+                    ? "border-b-2 border-[#FFAE00]"
+                    : "border-b-2 border-transparent"
                 }`}
-                style={{
-                  borderBottom: activeSection === 'about' ? "1.84px solid #FFAE00" : "none",
-                  color: activeSection === 'about' ? "#FFAE00" : "#0E0E0E",
-                }}
                 variants={menuItemVariants}
                 initial="hidden"
                 animate="visible"
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
               >
                 Hakkımızda
               </motion.a>
               <motion.a
-                onClick={() => scrollToSection('blog')}
-                className={`hover:text-orange-500 px-2 sm:px-3 py-2 text-sm lg:text-base font-medium transition-colors duration-300 cursor-pointer relative ${
-                  activeSection === 'blog' ? 'text-orange-500' : ''
+                onClick={() => scrollToSection("blog")}
+                className={`inline-block px-2 sm:px-3 py-2 text-sm lg:text-base font-medium text-[#0E0E0E] transition-colors duration-300 cursor-pointer relative ${
+                  activeSection === "blog"
+                    ? "border-b-2 border-[#FFAE00]"
+                    : "border-b-2 border-transparent"
                 }`}
-                style={{
-                  borderBottom: activeSection === 'blog' ? "1.84px solid #FFAE00" : "none",
-                  color: activeSection === 'blog' ? "#FFAE00" : "#0E0E0E",
-                }}
                 variants={menuItemVariants}
                 initial="hidden"
                 animate="visible"
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.3, delay: 0.2 }}
               >
                 Blog
               </motion.a>

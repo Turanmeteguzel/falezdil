@@ -50,7 +50,7 @@ const VideoSection = () => {
   };
 
   return (
-    <section className="py-6 sm:py-8 lg:py-12 xl:py-16 bg-[#FEFDF9]">
+    <section className="py-10 sm:py-12 lg:py-16 xl:py-20 bg-[#FEFDF9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <motion.div
@@ -61,20 +61,20 @@ const VideoSection = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h1
-            className="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-800 mb-2 sm:mb-3 lg:mb-4 font-lato leading-tight tracking-normal capitalize"
+            className="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-800 mb-4 sm:mb-6 lg:mb-8 font-lato leading-tight tracking-normal capitalize"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
             Bir Dersten Fazlası:
-            <br className="hidden sm:block" />
+            <br className="block sm:block" />
             <span className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0E0E0E] font-lato leading-tight tracking-normal capitalize">
               Öğrenmenin Yeni Hali
             </span>
           </motion.h1>
           <motion.p
-            className="text-sm sm:text-base lg:text-lg xl:text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-relaxed tracking-normal"
+            className="text-md sm:text-base lg:text-lg xl:text-xl text-[#0E0E0E] max-w-2xl sm:max-w-3xl lg:max-w-4xl font-lato font-light leading-relaxed tracking-normal"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -97,13 +97,13 @@ const VideoSection = () => {
             className="relative w-full max-w-4xl"
             variants={videoVariants}
           >
-            <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+            <div className="relative w-full aspect-video mx-auto bg-gray-200 rounded-lg overflow-hidden shadow-lg">
               <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/tLULIzOj-Ew"
                 title="Antalya Falez Dil Kursu Tanıtım Videosu"
                 frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
             </div>
