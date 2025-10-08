@@ -375,7 +375,7 @@ const Testimonials = () => {
           </motion.div>
 
           {/* Student Testimonials - Yatay scroll alanı (NewSection benzeri) */}
-          <div className="w-full overflow-hidden">
+          <div className="w-full overflow-hidden mt-6 md:mt-0">
             <div className="relative">
               <div
                 ref={scrollContainerRef}

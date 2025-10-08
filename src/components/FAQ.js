@@ -15,62 +15,73 @@ const FAQ = () => {
     {
       id: "program",
       question: "Ders programımı nasıl belirleyebilirim?",
-      answer:
-        "Kayıt sonrası danışman görüşmesi ve deneme dersine göre size özel haftalık ders planı oluşturulur. Öğrenme hedefleriniz, mevcut seviyeniz ve müsait zamanlarınız göz önünde bulundurularak kişiselleştirilmiş bir program hazırlanır.",
+      answer: (
+        <>
+          Ders programınız <strong>haftalık olarak planlanır</strong> ve tamamen
+          size özel şekilde hazırlanır. İstediğiniz gün ve saat aralıklarını
+          bize bildirmeniz yeterlidir. Bu sistem sayesinde{" "}
+          <strong>esnek bir eğitim takvimiyle</strong> ilerlemiş olursunuz.
+        </>
+      ),
     },
     {
       id: "duration",
       question: "Dersler süreleri nedir?",
       answer:
-        "Dersler genellikle 45-60 dakika sürmektedir. Programınıza göre bu süreler değişebilir. Yoğun programlar için 90 dakikalık dersler de mevcuttur. Ders süreleri öğrencinin ihtiyaçlarına ve program yoğunluğuna göre ayarlanır.",
+        "Tüm derslerimiz 60 dakikalık seanslar hâlinde planlanır. Haftalık toplam ders saatiniz, seçtiğiniz eğitim modeline ve hedefinize göre esnek şekilde ayarlanır. ",
     },
     {
       id: "cancellation",
       question: "Dersimi kaç gün öncesine kadar iptal edebilirim?",
-      answer:
-        "Derslerinizi en az 24 saat öncesine kadar iptal edebilirsiniz. Acil durumlar için 12 saat öncesine kadar iptal hakkınız bulunmaktadır. Düzenli iptaller için önceden bilgilendirme yapmanız önerilir.",
+      answer: (
+        <>
+          En geç <strong>24 saat öncesine kadar</strong> haber verdiğinizde
+          dersi iptal edip telafi dersi alabilirsiniz.
+        </>
+      ),
     },
     {
       id: "makeup",
       question: "İptal ettiğim dersi telafi alabilir miyim?",
       answer:
-        "Evet, iptal ettiğiniz dersleri uygun zamanlarda telafi edebilirsiniz. Telafi dersleri genellikle aynı hafta içinde veya bir sonraki haftada planlanır. Telafi derslerinin kayıp olmaması için düzenli takip yapılır.",
+        "Evet. Belirtilen süre öncesinde yapılan iptallerde telafi hakkı sunuyoruz. Telafi dersleri, sizin ve eğitmeninizin uygunluğuna göre en kısa sürede planlanır. ",
     },
     {
       id: "change",
       question: "Kursa başladıktan sonra programımı değiştirebilir miyim?",
       answer:
-        "Evet, kursa başladıktan sonra da programınızı ihtiyaçlarınıza göre değiştirebiliriz. Program değişiklikleri için danışman görüşmesi yapılır ve yeni programınız en kısa sürede uygulanır. Esneklik bizim önceliğimizdir.",
+        "Evet, tamamen size özel çalışıyoruz. Gelişiminizi izliyor ve ihtiyaçlarınıza göre ders günlerini, içerik yoğunluğunu veya eğitim modelinizi güncelleyebiliyoruz.",
     },
     {
       id: "age",
       question: "Hangi yaş gruplarına eğitim veriyorsunuz?",
       answer:
-        "7 yaşından itibaren tüm yaş gruplarına uygun eğitim programları sunuyoruz. Çocuklar için oyun temelli öğrenme, gençler için modern metodlar, yetişkinler için pratik odaklı yaklaşımlar kullanıyoruz. Her yaş grubuna özel müfredat ve materyaller hazırlanır.",
+        "7 yaş ve üzeri, okuma-yazma bilen her öğrenciyle çalışıyoruz. Çocuk, genç ve yetişkinler için seviyeye ve yaşa uygun programlar sunuyoruz. ",
     },
     {
       id: "groups",
       question: "3-4 kişilik sınıflar nasıl oluşturuluyor?",
       answer:
-        "Seviye belirleme testi sonrası benzer seviyedeki öğrencilerle küçük gruplar oluşturulur. Yaş, hedef ve öğrenme hızı da göz önünde bulundurulur. Grup uyumu için önceden tanışma dersi yapılır ve gerekirse grup değişikliği yapılabilir.",
+        "Benzer yaş, seviye ve öğrenme tarzına sahip öğrenciler eşleştirilerek 3–4 kişilik butik sınıflar oluşturulur. Bu sayede hem bireysel takip sağlanır hem de etkileşimli öğrenme ortamı oluşur. ",
     },
     {
       id: "exams",
       question: "IELTS / Goethe / TestDaF gibi sınavlara hazırlanabilir miyim?",
       answer:
-        "Evet, bu sınavlara özel hazırlık programlarımız bulunmaktadır. Her sınav için özel müfredat, deneme sınavları ve strateji eğitimi veriyoruz. Sınav tarihlerine göre yoğunlaştırılmış programlar da mevcuttur.",
-    },
-    {
-      id: "missed",
-      question: "Dersleri kaçırırsam ne olur?",
-      answer:
-        "Kaçırdığınız dersleri telafi etme imkanınız vardır. Kaçırılan dersler için özel materyaller ve ödevler gönderilir. Bir sonraki derste konular tekrar edilir ve eksik kalan kısımlar tamamlanır.",
+        "Evet. Tüm uluslararası sınavlara yönelik birebir ve grup derslerimiz mevcuttur. Okuma, yazma, dinleme ve konuşma alanında eksiksiz bir hazırlık süreci yürütüyoruz.",
     },
     {
       id: "trial",
-      question: "Deneme dersi ücretli mi?",
+      question:
+        "Klasik bir kurs mu, yoksa konuşma pratiği ve sosyal ortamlar da var mı?",
       answer:
-        "Deneme dersimiz ücretsizdir, böylece programımızı deneyimleyebilirsiniz. Deneme dersinde seviye belirleme yapılır, öğretmen tanışması gerçekleşir ve size özel program önerisi sunulur. Herhangi bir yükümlülük olmadan deneyim kazanabilirsiniz.",
+        "Hayır, yalnızca gramer anlatan klasik bir kurs değiliz.Derslerimizde konuşma pratiğine öncelik veriyor, grameri gerçek iletişim içinde öğretiyoruz.Ayrıca sunumlar, grup oyunları ve sohbet etkinlikleriyle dil öğrenimini sosyal bir alışkanlığa dönüştürüyoruz. ",
+    },
+    {
+      id: "payment",
+      question: "Deneme dersi ücretli mi? ",
+      answer:
+        "Hayır, ilk tanışma görüşmesi ve deneme dersimiz tamamen ücretsizdir. Ortamımızı görmeniz, öğretmenle tanışmanız ve sistemi deneyimlemeniz için sizi davet ediyoruz. ",
     },
   ];
 
