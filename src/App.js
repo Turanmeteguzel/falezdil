@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import SEO from "./components/SEO";
 import "./App.css";
 import NewSection from "./components/NewSection";
 import LanguageProgram from "./components/LanguageProgram";
@@ -20,45 +22,48 @@ import logo from "./assets/images/navbar/falezz.jpg";
 
 function App() {
   return (
-    <Router>
-      <FloatingWhatsApp
-        accountName="Antalya Falez Dil Kursu"
-        phoneNumber="+905526719607"
-        statusMessage="Çevrimiçi"
-        avatar={logo}
-        chatMessage="Merhaba, İyi Günler.             Size Nasıl Yardımcı Olabiliriz?"
-        notification={true}
-        notificationDelay={15}
-        notificationLoop={3}
-        notificationSound={true}
-        buttonClassName="whatsapp-btn"
-      />
-      <ScrollToTop />
-      <div className="App">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Navbar />
-                <Hero />
-                <NewSection />
-                <LanguageProgram />
-                <ThreeCards />
-                <VideoSection />
-                <Testimonials />
-                <FAQ />
-                <ContactForm />
-                <Footer />
-              </>
-            }
-          />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} />
-          <Route path="/cookies-settings" element={<CookiesSettings />} />
-        </Routes>
-      </div>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <SEO />
+        <FloatingWhatsApp
+          accountName="Antalya Falez Dil Kursu"
+          phoneNumber="+905526719607"
+          statusMessage="Çevrimiçi"
+          avatar={logo}
+          chatMessage="Merhaba, İyi Günler.             Size Nasıl Yardımcı Olabiliriz?"
+          notification={true}
+          notificationDelay={15}
+          notificationLoop={3}
+          notificationSound={true}
+          buttonClassName="whatsapp-btn"
+        />
+        <ScrollToTop />
+        <div className="App">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Navbar />
+                  <Hero />
+                  <NewSection />
+                  <LanguageProgram />
+                  <ThreeCards />
+                  <VideoSection />
+                  <Testimonials />
+                  <FAQ />
+                  <ContactForm />
+                  <Footer />
+                </>
+              }
+            />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/cookies-settings" element={<CookiesSettings />} />
+          </Routes>
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 

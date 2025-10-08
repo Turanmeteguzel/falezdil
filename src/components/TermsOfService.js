@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import TermsOfServiceSEO from "./TermsOfServiceSEO";
 
 const TermsOfService = () => {
   const containerVariants = {
@@ -30,6 +31,7 @@ const TermsOfService = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <TermsOfServiceSEO />
       <Navbar />
 
       {/* Main Content */}

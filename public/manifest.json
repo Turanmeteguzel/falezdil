@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Falez Dil",
+  "name": "Antalya Falez Dil Kursu - İngilizce ve Almanca Eğitimi",
+  "description": "Antalya'nın en kaliteli dil kursu! İngilizce ve Almanca konuşma odaklı eğitim. Butik sınıflar, profesyonel eğitmenler, kişiselleştirilmiş programlar.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +19,11 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#FFAE00",
+  "background_color": "#FEFDF9",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "tr"
 }

@@ -7,8 +7,8 @@ const LanguageProgram = () => {
     <div id="blog" className="py-10 sm:py-12 lg:py-16 xl:py-20 bg-[#FEFDF9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left space-y-4 sm:space-y-6 lg:space-y-8">
+        <div className="max-w-7xl mx-auto mb-3 sm:mb-4 lg:mb-6 xl:mb-8">
+          <div className="text-left  sm:space-y-6 lg:space-y-8">
             <h1 className="font-lato">
               <span
                 className="block text-2xl sm:text-3xl lg:text-4xl font-light leading-tight text-[#0E0E0E] capitalize"
@@ -19,7 +19,7 @@ const LanguageProgram = () => {
                   textTransform: "capitalize",
                 }}
               >
-                Klasik Kursları Unut,
+                Senin İçin En Uygun İngilizce veya Almanca,
               </span>
               <span
                 className="block text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight text-[#0E0E0E] capitalize"
@@ -30,7 +30,7 @@ const LanguageProgram = () => {
                   textTransform: "capitalize",
                 }}
               >
-                Gerçek Öğrenmeye Geç
+                Eğitim Programını Birlikte Belirleyelim
               </span>
             </h1>
 

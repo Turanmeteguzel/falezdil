@@ -53,13 +53,13 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="py-10 sm:py-12 lg:py-16 xl:py-20 mx-4 sm:mx-4 lg:mx-6 xl:mx-8 my-0"
+      className="py-10 sm:py-12 lg:py-16 xl:py-20  my-0 border-2 border-[#FFFFC7] w-[100%] rounded-tl-3xl rounded-tr-3xl"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-6 xl:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-1 lg:px-1 xl:px-1">
         {/* Üst Bölüm - Logo, İsim ve İletişim Bilgileri */}
         <div className="flex flex-col lg:flex-row justify-between items-start mb-4 sm:mb-4 lg:mb-6 space-y-4 sm:space-y-4 lg:space-y-0">
           {/* Sol Tarafta Logo ve İsim */}

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import PrivacyPolicySEO from "./PrivacyPolicySEO";
 
 const PrivacyPolicy = () => {
   const containerVariants = {
@@ -30,6 +31,7 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <PrivacyPolicySEO />
       <Navbar />
 
       {/* Main Content */}

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import CookiesSettingsSEO from "./CookiesSettingsSEO";
 
 const CookiesSettings = () => {
   const [cookiePreferences, setCookiePreferences] = useState({
@@ -79,6 +80,7 @@ const CookiesSettings = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <CookiesSettingsSEO />
       <Navbar />
 
       {/* Main Content */}
